@@ -1,13 +1,17 @@
 <template>
   <div>
-    <input v-model="userName" />
-    <input type="password" v-model="password" />
-    <input type="button" value="注册" @click="clickMethods" />
+    <CommHeader></CommHeader>
+    <TitleShow></TitleShow>
+    <Liucheng></Liucheng>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import CommHeader from './components/commComponent/CommHeader'
+import Liucheng from './components/indexComponent/Liucheng/'
+import TitleShow from './components/indexComponent/titleShow/'
+
+
 
 export default {
   data(){
@@ -15,6 +19,11 @@ export default {
       userName: "",
       password: ""
     }
+  },
+  components:{
+    CommHeader,
+    Liucheng,
+    TitleShow
   },
   name: 'app',
   methods: {
