@@ -11,9 +11,9 @@ var userInfo = new schema({
         type:schema.Types.ObjectId,
         ref: "user"  //引用
     },
-    avatar:{
+    /*avatar:{
         type:String
-    },
+    },*/
     realName:{
         require:true,
         type:String
@@ -30,7 +30,7 @@ var userInfo = new schema({
     email:{
         require:true,
         type:String
-    },
+    }/*,
     jobIntension:{
         require:true,
         type:String
@@ -65,5 +65,7 @@ var userInfo = new schema({
     },
     social:{
         type:Array
-    }
+    }*/
 })
+
+module.exports = userInfo;

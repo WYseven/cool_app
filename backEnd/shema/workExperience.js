@@ -36,5 +36,5 @@ var introduction = new schema({
     describe:{
         require:true,
         type:String
-    },
+    }
 });
