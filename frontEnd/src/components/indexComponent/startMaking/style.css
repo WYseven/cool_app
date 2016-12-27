@@ -1,0 +1,13 @@
+.startMaking {
+	padding-top: 217px;
+	background: url(../../images/index/bg.png) no-repeat center 49px;
+}
+.startMaking p {
+	font-size: 24px;
+	color: #707a87;
+	line-height: 72px;
+	text-align: center;
+}
+.startMaking .createResume {
+	margin-bottom: 50px;
+}

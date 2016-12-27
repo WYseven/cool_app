@@ -1,0 +1,13 @@
+.flowpath .warp {
+	padding: 26px 0 38px;
+}
+.sectionTitle {
+	font-size: 24px;
+	color: #707c88;
+	text-align: center;
+	line-height: 72px;
+}
+.flowpath p {
+	padding-bottom:132px;
+	background: url(../../images/index/indexFlowpathBg.jpg) no-repeat 0 72px;
+}

@@ -1,0 +1,15 @@
+<section class="jobHunting">
+	<section class="warp">
+		<p class="sectionTitle">正在使用酷简历找工作的人</p>
+		<ul class="clearFix">
+			<!-- 求职列表 -->
+			<li class="item active" v-for="items in list" >
+				<div class="Pic"><img v-bind:src="items.imgUrl"></div>
+				<p class="jobSeeker">{{items.userName}}</p>
+				<p class="motto">{{ items.intro.substring(0,15) }}...</p>
+			</li>
+			
+		</ul>
+		<a href="javascript:;" class="seeMore">查看更多</a>
+	</section>
+</section>

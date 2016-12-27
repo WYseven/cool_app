@@ -1,17 +1,22 @@
 <template>
   <div>
     <CommHeader></CommHeader>
-    <TitleShow></TitleShow>
-    <Liucheng></Liucheng>
+    <IndexBanner></IndexBanner>
+    <IndexFlowpath></IndexFlowpath>
+    <IndexJobhunting></IndexJobhunting>
+    <StartMaking></StartMaking>
+    <CommFooter></CommFooter>
+    <img src="components/images/index/12.jpg" alt="" />
   </div>
 </template>
 
 <script>
 import CommHeader from './components/commComponent/CommHeader'
-import Liucheng from './components/indexComponent/Liucheng/'
-import TitleShow from './components/indexComponent/titleShow/'
-
-
+import IndexBanner from './components/indexComponent/IndexBanner/'
+import IndexFlowpath from './components/indexComponent/IndexFlowpath/'
+import IndexJobhunting from './components/indexComponent/IndexJobhunting/'
+import StartMaking from './components/indexComponent/StartMaking/'
+import CommFooter from './components/commComponent/CommFooter'
 
 export default {
   data(){
@@ -22,8 +27,11 @@ export default {
   },
   components:{
     CommHeader,
-    Liucheng,
-    TitleShow
+    IndexBanner,
+    IndexFlowpath,
+    IndexJobhunting,
+    StartMaking,
+    CommFooter
   },
   name: 'app',
   methods: {
@@ -42,6 +50,7 @@ export default {
 }
 </script>
 
+<style type="text/css" src="../src/components/commComponent/reset.css"></style>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,11 +1,8 @@
-<template>
-  <div>header</div>
+<template src="./header.html">
+
 </template>
 
 <script>
 
 </script>
-
-<style>
-
-</style>
+<style src="./common.css"></style>
