@@ -6,7 +6,6 @@
     <IndexJobhunting></IndexJobhunting>
     <StartMaking></StartMaking>
     <CommFooter></CommFooter>
-    <img src="components/images/index/12.jpg" alt="" />
   </div>
 </template>
 
