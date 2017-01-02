@@ -34,7 +34,7 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'resume.html',
       template: 'index.html',
-      chunks: ['index'],
+      chunks: ['resume'],
       inject: true
     })
   ]

@@ -62,7 +62,14 @@ module.exports = app.listen(port, function (err) {
     console.log(err)
     return
   }
-  var uri = 'http://localhost:' + port
+
+ //如果拿到的是访问其他页面，则拼接上
+  var layer = "";
+  if(process.argv[2]){
+    layer = process.argv[2];
+  }
+
+  var uri = 'http://localhost:' + port + "/"+layer;
   console.log('Listening at ' + uri + '\n')
 
   // when env is testing, don't need open it

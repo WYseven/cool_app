@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
+    "dev-resume": "node build/dev-server.js resume.html",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
