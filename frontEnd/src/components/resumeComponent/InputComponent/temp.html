@@ -1,0 +1,11 @@
+<!--姓名文本框-->
+<div class="inputTxt infoInputTxt clearFix">
+  <span class="inputLeft infoInputLeft">
+    <i class="star" v-if="required">*</i>
+    {{label}}
+  </span>
+  <input type="text" class="forTxt infoForTxt"/>
+
+  <!--文本框为空时-->
+  <a class="empty infoEmpty">姓名不能为空</a>
+</div>

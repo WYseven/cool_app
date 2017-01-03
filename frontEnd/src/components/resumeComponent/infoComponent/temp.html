@@ -1,12 +1,8 @@
 <section class="info">
   <div class="infoCon">
-    <!--姓名文本框-->
-    <div class="inputTxt infoInputTxt clearFix">
-      <span class="inputLeft infoInputLeft"><i class="star">*</i>姓名</span>
-      <input type="text" class="forTxt emptyInput infoForTxt"/>
-
-      <!--文本框为空时-->
-      <a class="empty infoEmpty">姓名不能为空</a>
-    </div>
+    <m-input :required="true" label="姓名"></m-input>
+    <m-input :required="true" label="邮箱"></m-input>
+    <m-input :required="true" label="电话"></m-input>
+    <m-input :required="true" label="姓名"></m-input>
   </div>
 </section>

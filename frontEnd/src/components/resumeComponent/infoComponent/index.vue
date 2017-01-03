@@ -2,8 +2,11 @@
 
 </template>
 <script>
-
+import mInput from '../InputComponent/index'
+export default {
+  components:{
+    mInput
+  }
+}
 </script>
 
-<style src="../../commComponent/common.css"></style>
-<style src="./style.css"></style>
