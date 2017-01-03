@@ -1,0 +1,50 @@
+/*底部*/
+.foot{
+  width:100%;
+  height:120px;
+  border-top:2px solid #e15771;
+  background: #fff;
+}
+.fotCon{
+  width:1000px;
+  height:91px;
+  margin:0 auto;
+  padding-top:29px;
+}
+/*底部logo*/
+.fotLogo{
+  width:180px;
+  height:51px;
+  float: left;
+}
+
+/*底部链接、描述*/
+.fotDesc{
+  height:49px;
+  width:790px;
+  padding-top:2px;
+  border-left:1px solid #e0e8ea;
+  float: left;
+  padding-left:29px;
+  color: #9198a0;
+}
+.fotDesc .links{
+  height:15px;
+  font-size: 13px;
+  margin-bottom:14px;
+}
+.fotDesc .links a{
+  height:15px;
+  line-height: 15px;
+  display: block;
+  float: left;
+  padding:0px 9px;
+  border-right:1px solid #b1bac3;
+  color: #9198a0;
+}
+.fotDesc .links .noPadding{
+  padding-left:0px;
+}
+.fotDesc .links .noBorder{
+  border: none;
+}
