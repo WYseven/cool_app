@@ -16,7 +16,12 @@ import commNav from "./components/commComponent/commResume/commNav/index"
 export default {
   data(){
     return {
-        currentNav:"info"
+
+    }
+  },
+  computed:{
+    currentNav(){
+        return this.$store.state.currentNav
     }
   },
   name:"Resume",
