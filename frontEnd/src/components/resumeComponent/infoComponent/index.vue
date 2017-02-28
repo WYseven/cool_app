@@ -3,6 +3,7 @@
 </template>
 <script>
  export default {
+    name:"Info",
     data(){
       return {
         ruleForm:{
@@ -33,7 +34,7 @@
           }
         });
       }
-    }   
+    }
 }
 </script>
 <style src="./style.css"></style>

@@ -1,12 +1,30 @@
 <nav class="navigation">
   <div class="navCon">
     <ul class="navConLeft">
-      <li><a href="#">基本信息</a><span href="#" class="mustOptions"></span></li>
-      <li><a href="#">项目经验</a></li>
-      <li><a href="#">技能评估</a></li>
-      <li><a href="#">个人介绍</a></li>
-      <li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
-      <li  class="noRight"><a href="#">教育经历</a></li>
+      <li>
+        <a href="#info" :class="{current:currentNav==='info'}">基本信息</a>
+        <span class="mustOptions"></span>
+      </li>
+      <li>
+        <a href="#project" :class="{current:currentNav==='project'}">项目经验</a>
+        <span class="mustOptions"></span>
+      </li>
+      <li>
+        <a href="#kill" :class="{current:currentNav==='kill'}">技能评估</a>
+        <span class="mustOptions"></span>
+      </li>
+      <li>
+        <a href="#about" :class="{current:currentNav==='about'}">个人介绍</a>
+        <span class="mustOptions"></span>
+      </li>
+      <li>
+        <a href="#work" :class="{current:currentNav==='work'}">工作经历</a>
+        <span class="noOptions"></span>
+      </li>
+      <li  class="noRight">
+        <a href="#education" :class="{current:currentNav==='education'}">教育经历</a>
+        <span class="noOptions"></span>
+      </li>
     </ul>
   </div>
 </nav>

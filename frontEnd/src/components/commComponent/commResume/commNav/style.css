@@ -38,6 +38,12 @@
   color:#e05670;
   border-bottom:3px solid #e05670;
 }
+
+.navCon li a.current{
+  color:#e05670;
+  border-bottom:3px solid #e05670;
+}
+
 /*必须填*/
 .navCon span{
   display: block;
