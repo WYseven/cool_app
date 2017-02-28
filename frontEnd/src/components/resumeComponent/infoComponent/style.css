@@ -10,37 +10,6 @@
   margin-top:20px;
 }
 
-
-
-/*文本框*/
-.inputTxt{
-  height:34px;
-  overflow: hidden;
-  font-size: 14px;
-}
-/*基本信息文本框与文本框之间的距离*/
-.infoInputTxt{
-  margin-bottom:20px;
-}
-
-/*基本信息，表单左边的宽度*/
-.infoInputLeft{
-  width:138px;
-}
-
-/*文本框为空*/
-.empty{
-  padding-left: 22px;
-}
-
-.infoEmpty{
-  height:34px;
-  line-height:34px;
-}
-/*文本框填写正确*/
-.correct{
-  background: url(../../images/common/correct.png) no-repeat left center;
-  color:#949fab;
-  padding-left: 22px;
-  margin-left: 8px;
+.el-form--label-left .el-form-item__label {
+  text-align: right !important;
 }

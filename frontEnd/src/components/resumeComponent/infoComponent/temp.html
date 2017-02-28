@@ -1,8 +1,47 @@
 <section class="info">
-  <div class="infoCon">
-    <m-input :required="true" label="姓名"></m-input>
-    <m-input :required="true" label="邮箱"></m-input>
-    <m-input :required="true" label="电话"></m-input>
-    <m-input :required="true" label="姓名"></m-input>
-  </div>
+	<div class="infoCon">
+	  <el-form 
+	    :model="ruleForm" 
+	    :rules="rules" 
+	    ref="ruleForm" 
+	    label-width="138px"
+	    class="demo-ruleForm"
+	    label-position="left"
+	  >
+	    <el-form-item label="姓名" prop="name" >
+	      <el-input v-model="ruleForm.name"></el-input>
+	    </el-form-item>
+	    <el-form-item label="性别" prop="resource">
+	      <el-radio-group v-model="ruleForm.resource">
+	        <el-radio label="男"></el-radio>
+	        <el-radio label="女"></el-radio>
+	      </el-radio-group>
+	    </el-form-item>
+	    
+	    <el-form-item label="最高学历" required label-width="140px" >
+	      <el-col :span="11">
+	        <el-form-item prop="date1">
+	          <el-select v-model="ruleForm.region" placeholder="请选择学历">
+	            <el-option label="区域一" value="shanghai"></el-option>
+	            <el-option label="区域二" value="beijing"></el-option>
+	          </el-select>
+	        </el-form-item>
+	      </el-col>
+	      <el-col class="line" :span="2"></el-col>
+	      <el-col :span="11">
+	        <el-form-item prop="date2">
+	          <el-select v-model="ruleForm.region" placeholder="毕业时间">
+	            <el-option label="区域一" value="shanghai"></el-option>
+	            <el-option label="区域二" value="beijing"></el-option>
+	          </el-select>
+	        </el-form-item>
+	      </el-col>
+	    </el-form-item>
+
+	    <el-form-item>
+	      <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+	      <el-button @click="resetForm('ruleForm')">重置</el-button>
+	    </el-form-item>
+	  </el-form>
+	</div>
 </section>
