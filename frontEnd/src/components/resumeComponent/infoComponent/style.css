@@ -7,9 +7,23 @@
   width:604px;
   padding:30px 82px 40px 64px;
   background-color: #fff;
-  margin-top:20px;
+  margin-top:30px;
 }
 
 .el-form--label-left .el-form-item__label {
   text-align: right !important;
+}
+
+.infoCon input {
+	width: 318px;
+	height: 32px;
+	line-height: 26px;
+}
+
+.hight input {
+	width: 148px;
+}
+
+.infoCon label {
+	color:#949fab;
 }

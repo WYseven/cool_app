@@ -2,12 +2,18 @@
 
 </template>
 <script>
+import infoPrompt from '../prompt/InfoPrompt.vue'
  export default {
     name:"Info",
+    components:{
+      infoPrompt
+    },
     data(){
       return {
         ruleForm:{
           name:"",
+          region1:"",
+          region22:"",
           resource:"",
           date1:"",
           date2:""

@@ -8,6 +8,7 @@
 npm-debug.log
 
 backEnd/node_modules/
+node_modules/
 frontEnd/node_modules/
 frontEnd/public/
 public/

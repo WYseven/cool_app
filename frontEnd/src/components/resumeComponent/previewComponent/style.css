@@ -1,0 +1,56 @@
+.preResume{
+	width:220px;
+	height:191px;
+	float: right;
+}
+.preResume .preview{
+	width:125px;
+	height:45px;
+	border-radius: 3px;
+	background:#e15671 url(/static/images/common/preview.png) no-repeat 60px 15px;
+	line-height:45px;
+	padding-left:95px;
+	color: #fff;
+}
+.preResume .proBar{
+	width:220px;
+	height:125px;
+	background-color: #fff;
+	margin-top:20px;
+}
+.proBar p{
+	text-align: center;
+	padding-top:30px;
+	height:24px;
+	line-height:24px;
+	padding-left:45px;
+}
+.proBar span{
+	float:left;
+	margin-right:10px;
+}
+.proBar strong{
+	font-size: 24px;
+	color: #e15671;
+	float: left;
+}
+/*è¿›åº¦æ¡*/
+.progress{
+	width: 179px;
+	height:6px;
+	background:#f3f5f7;
+	border-radius: 1px;
+	margin:30px auto 0px;
+	position: relative;
+}
+/*é¢œè‰²æ¡*/
+.bar{
+	width:30%;
+	height:6px;
+	background-color:#e15671;
+}
+.ball{
+	position:absolute;
+	left:30%;
+	top:-7px;
+}

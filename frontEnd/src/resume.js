@@ -13,6 +13,10 @@ import Resume from './Resume.vue'
 
 import Info from "./components/resumeComponent/infoComponent/index.vue"
 import Project from "./components/resumeComponent/projectComponent/index.vue"
+import Skill from "./components/resumeComponent/skillComponent/index.vue"
+import Profile from "./components/resumeComponent/profileComponent/index.vue"
+import Work from "./components/resumeComponent/workComponent/index.vue"
+import Education from "./components/resumeComponent/educationComponent/index.vue"
 
 
 import store from './store/store.js'
@@ -26,16 +30,32 @@ Vue.use(ElementUI)
 const router = new VueRouter({
   routes:[
     {
-      path:"/info",
+      path:"/",
       component:Info
     },
     {
-      path:"/",
+      path:"/info",
       component:Info
     },
     {
       path:"/project",
       component:Project
+    },
+    {
+      path:"/profile",
+      component:Profile
+    },
+    {
+      path:"/skill",
+      component:Skill
+    },
+    {
+      path:"/work",
+      component:Work
+    },
+    {
+      path:"/education",
+      component:Education
     }
   ]
 })
