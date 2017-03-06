@@ -27,3 +27,19 @@
 .infoCon label {
 	color:#949fab;
 }
+
+.reset-button-color{
+  background: #e15671;
+}
+
+
+
+.reset-button-style {
+  width: 140px;
+  height: 36px;
+  border: none;
+}
+
+.reset-button-border{
+  border: 1px solid #e4e9ed;
+}

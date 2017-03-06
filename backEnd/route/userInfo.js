@@ -6,11 +6,13 @@ var router = express.Router();
 //引入简历基本信息的模型
 var userInfoModel = require("../model/userInfoModel");
 
+
 //保存数据
 router.post("/save",function(req,res){
-    var realName = req.body.realName
-
+    var name = req.body.name;
+    console.log(req.body.user);
     userInfoModel.findOne({user:req.body.user}).then(function(data){
+        console.log(data)
         if( !data ){
             //保存的
             var infoModel = new userInfoModel(req.body);
@@ -28,10 +30,6 @@ router.post("/save",function(req,res){
             })
         }
     });
-
-
-
-
 })
 
 //更新数据

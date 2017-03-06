@@ -18,6 +18,10 @@ import Profile from "./components/resumeComponent/profileComponent/index.vue"
 import Work from "./components/resumeComponent/workComponent/index.vue"
 import Education from "./components/resumeComponent/educationComponent/index.vue"
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios);
 
 import store from './store/store.js'
 

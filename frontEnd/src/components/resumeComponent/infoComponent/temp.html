@@ -15,14 +15,26 @@
 	    <el-form-item label="姓名" prop="name" >
 	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
 	    </el-form-item>
-	    <el-form-item label="性别" prop="resource">
-	      <el-radio-group v-model="ruleForm.resource">
+
+	    <el-form-item label="性别" prop="gender">
+	      <el-radio-group v-model="ruleForm.gender">
 	        <el-radio label="男"></el-radio>
 	        <el-radio label="女"></el-radio>
 	      </el-radio-group>
 	    </el-form-item>
 
-	    <el-form-item class="hight" label="最高学历" required >
+	    <el-form-item label="电话" prop="phone">
+	      <el-input class="name-input" v-model="ruleForm.phone"></el-input>
+	    </el-form-item>
+
+	    <el-form-item label="邮箱" prop='email'>
+	      <el-input class="name-input" v-model="ruleForm.email"></el-input>
+	    </el-form-item>
+	    <el-form-item label="求职意向" prop="intention" >
+	      <el-input class="name-input" v-model="ruleForm.intention"></el-input>
+	    </el-form-item>
+
+	    <!-- <el-form-item class="hight" label="最高学历" required >
 	      <el-col :span="7">
 	        <el-form-item prop="date1">
 	          <el-select v-model="ruleForm.region1" placeholder="请选择学历">
@@ -41,11 +53,29 @@
 	        </el-form-item>
 	      </el-col>
 	    </el-form-item>
+	    
+	    <el-form-item label="工作年限" required >
+	    		    <el-select v-model="value4" clearable placeholder="请选择">
+	    		        <el-option
+	    		          v-for="item in options"
+	    		          :label="item.label"
+	    		          :value="item.value">
+	    		        </el-option>
+	    		      </el-select>
+	    </el-form-item>
+	    <el-form-item label="所在地" required >
+	    		    <el-cascader
+	    		      :options="options"
+	    		      v-model="selectedOptions3"
+	    		    ></el-cascader>
+	    </el-form-item> -->
+	
 
 	    <el-form-item>
-	      <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
-	      <el-button @click="resetForm('ruleForm')">重置</el-button>
+	      <el-button class="reset-button-style reset-button-color" type="primary" @click="submitForm('ruleForm')">保存</el-button>
+	      <el-button class='reset-button-style reset-button-border' style="margin-left: 35px;" click="resetForm('ruleForm')">重置</el-button>
 	    </el-form-item>
 	  </el-form>
 	</div>
+	<info-show></info-show>
 </section>

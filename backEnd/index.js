@@ -7,10 +7,18 @@ var app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//解析json为对象
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(cookieParser());
 
 var mongoose = require("mongoose");
+var Promise = require("bluebird");
+Promise.promisifyAll(mongoose);
+
+mongoose.Promise = global.Promise;
+
 
 mongoose.connect("mongodb://localhost:27017/myapp");
 
@@ -39,4 +47,8 @@ db.on("open",function(){
     next();
 });*/
 
-app.use("/api",require("./route/api.js"))
+app.use("/api",require("./route/api.js"));
+
+app.get("/",(req,res)=>{
+    res.send("ok")
+})

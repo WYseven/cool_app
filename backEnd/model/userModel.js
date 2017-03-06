@@ -8,7 +8,4 @@ var userShema = require("../shema/user.js");
 var User = mongoose.model("User",userShema);
 
 
-
-
-
 module.exports = User;
