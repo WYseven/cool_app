@@ -10,7 +10,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   strict: true,
   state: {
-    currentNav: 'info'  //所处在的路由
+    currentNav: 'info',  //所处在的路由
+    info:[]
   },
   mutations: {
     currentNavChange (state,a) {
@@ -19,7 +20,20 @@ const store = new Vuex.Store({
   },
   actions:{
   	['request-info-save']({commit},data){
-  		return Vue.axios.post(
+      return Vue.axios.post(
+            data.url,
+            data.data,
+            {
+              headers:{
+                'Content-Type':'application/json'
+              }
+            }
+        ).then(function (){
+            
+        })
+    },
+    ['request-project-save']({commit},data){
+      return Vue.axios.post(
             data.url,
             data.data,
             {
@@ -28,7 +42,7 @@ const store = new Vuex.Store({
               }
             }
         )
-  	}
+    }
   }
 })
 

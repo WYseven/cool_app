@@ -6,7 +6,8 @@ import Vue from 'vue'
 import infoPrompt from '../../prompt/InfoPrompt.vue'
 import infoShow from '../infoShow/index.vue'
 import infoSocial from '../infoSocial/index.vue'
- export default {
+
+export default {
     name:"Info",
     components:{
       infoPrompt,
@@ -51,8 +52,9 @@ import infoSocial from '../infoSocial/index.vue'
       submitForm(formName){
         this.$refs[formName].validate((valid) => {
           if (valid) {
+            
             this.$store.dispatch("request-info-save",{
-              url:'/api/info/save',
+              url:'save',
               data:this.ruleForm
             }).then((response)=>{
               console.log(response.data);
