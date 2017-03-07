@@ -4,6 +4,9 @@
 		cls="info"
 	></info-prompt>
 	<div class="infoCon">
+	<div class="headPic">
+		<a href="#" class="headPicBox"><img src="/static/images/info/headPic.png"></a>
+	</div>
 	  <el-form
 	    :model="ruleForm"
 	    :rules="rules"
@@ -34,9 +37,9 @@
 	      <el-input class="name-input" v-model="ruleForm.intention"></el-input>
 	    </el-form-item>
 
-	    <!-- <el-form-item class="hight" label="最高学历" required >
+	    <el-form-item class="hight" label="最高学历" required >
 	      <el-col :span="7">
-	        <el-form-item prop="date1">
+	        <el-form-item prop="date1" icon='arrow-down'>
 	          <el-select v-model="ruleForm.region1" placeholder="请选择学历">
 	            <el-option label="区域一" value="shanghai"></el-option>
 	            <el-option label="区域二" value="beijing"></el-option>
@@ -55,22 +58,48 @@
 	    </el-form-item>
 	    
 	    <el-form-item label="工作年限" required >
-	    		    <el-select v-model="value4" clearable placeholder="请选择">
-	    		        <el-option
-	    		          v-for="item in options"
-	    		          :label="item.label"
-	    		          :value="item.value">
-	    		        </el-option>
-	    		      </el-select>
+		    <el-select v-model="value4" clearable placeholder="请选择">
+		        <el-option
+		          v-for="item in options"
+		          :label="item.label"
+		          :value="item.value">
+		        </el-option>
+		      </el-select>
 	    </el-form-item>
-	    <el-form-item label="所在地" required >
-	    		    <el-cascader
-	    		      :options="options"
-	    		      v-model="selectedOptions3"
-	    		    ></el-cascader>
-	    </el-form-item> -->
-	
-
+	    <el-form-item label="所在地" required>
+		    <el-cascader
+		      :options="options"
+		      v-model="location"
+		    ></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="籍贯" >
+		    <el-cascader
+		      :options="options"
+		      v-model="originPlace"
+		    ></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="QQ" >
+		    <el-cascader
+		      :options="options"
+		      v-model="qq"
+		    ></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="微信号" >
+		    <el-cascader
+		      :options="options"
+		      v-model="mchat"
+		    ></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="生日" >
+		    <el-cascader
+		      :options="options"
+		      v-model="birthday"
+		    ></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="社交主页" >
+	    	<info-social></info-social>
+	    </el-form-item>
+			
 	    <el-form-item>
 	      <el-button class="reset-button-style reset-button-color" type="primary" @click="submitForm('ruleForm')">保存</el-button>
 	      <el-button class='reset-button-style reset-button-border' style="margin-left: 35px;" click="resetForm('ruleForm')">重置</el-button>

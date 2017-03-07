@@ -1,0 +1,53 @@
+/*社交主页*/
+.social{/*
+	width:446px;*/
+	float: left;
+}
+.social li{
+	float:left;
+	margin-right:23px;
+	width:34px;
+	height:34px;
+	border-radius: 17px;
+	position: relative;
+}
+.social .active{
+	border:2px solid #e15671;	
+}
+.social .corner{
+	width:16px;
+	height:16px;
+	position: absolute;
+	right:-8px;
+	bottom:-8px;
+}
+.social ul{
+	height:38px;
+}
+.socialDet{
+	height:34px;
+	margin-top:20px;
+}
+.socialDet img{
+	float:left;
+	margin-right:10px;
+}
+.socialDet .detTxt{
+	width:274px;
+	height:32px;
+	line-height: 32px;
+	border:1px solid #e15671;
+	float:left;
+	border-radius: 2px;
+	padding-left:5px;
+}
+.socialClose{
+	width:24px;
+	height:24px;
+	float: left;
+	margin:6px 0px 0px 10px;
+	background-image: url('/static/images/info/socialClose.png');
+}
+.socialClose:hover{
+	background-image: url('/static/images/info/socialClose2.png');
+}

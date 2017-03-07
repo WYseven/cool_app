@@ -43,3 +43,25 @@
 .reset-button-border{
   border: 1px solid #e4e9ed;
 }
+
+.el-form-item__label {
+  font-size: 12px;
+}
+
+.headPic{
+  width:100%;
+  height:120px;
+  margin-bottom:38px;
+}
+
+.headPicBox{
+  width:120px;
+  height:120px;
+  border-radius: 60px;
+  display: block;
+  margin:0 auto;
+}
+
+.el-icon-caret-top:before{
+  content: "\E603";
+}
