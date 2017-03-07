@@ -7,6 +7,8 @@ var app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//cors
+
 //解析json为对象
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
