@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/info.css" />
+		
+	</head>
+	<body>
+		<!--登陆后首页-->
+		<header class="topHeader">
+			<div class="headerCon">
+				<!--左边logo-->
+				<div class="heaLogo">
+					<a href="#" class="logo loginLogo"><img src="../images/common/healogo.jpg" /></a>
+					<a href="#" class="resumeFill">简历填写</a>
+					<a href="#" class="indexBtn">首页</a>
+				</div>
+				<!--右边我的简历、登陆、注册-->
+				<div class="heaRight loginHeaRight">
+					<a href="#" class="posResume">发布简历</a>
+					<a href="#" class="user"></a>
+					<a href="#" class="userName">C.Atkins</a>
+					<a href="#" class="relase"></a>
+				</div>
+			</div>
+		</header>
+		
+		<!--导航-->
+		<nav class="navigation">
+			<div class="navCon">
+				<ul class="navConLeft">
+					<li><a href="#">基本信息</a><span href="#" class="mustOptions"></span></li>
+					<li><a href="#">项目经验</a></li>
+					<li><a href="#">技能评估</a></li>
+					<li><a href="#">个人介绍</a></li>
+					<li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
+					<li  class="noRight"><a href="#">教育经历</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--提示填写信息及预览简历-->
+		<section class="prompt">
+			<div class="promptCon  infoPro">
+				<!--基本信息文字-->
+				请填写真的信息，方便 招聘者与您联系。
+			</div>
+			
+			<!--预览简历-->
+			<div class="preResume">
+				<div class="preview">预览简历</div>
+				<div class="proBar">
+					<p><span>简历完成度</span> <strong>30%</strong></p>
+					<div class="progress">
+						<div class="bar">
+							<img src="../images/common/progress.png" / class="ball">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!--填写基本信息-->
+		<section class="info">
+			<div class="infoCon">
+				<!--上传头像-->
+				<div class="headPic">
+					<a href="#" class="headPicBox"><img src="../images/info/headPic.png" /></a>
+				</div>
+				<form>
+					<!--姓名文本框-->
+					<div class="inputTxt infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>姓名</span>
+						<input type="text" class="forTxt emptyInput infoForTxt"/>
+						
+						<!--文本框为空时-->
+						<a class="empty infoEmpty">姓名不能为空</a>
+					</div>
+					
+					<!--性别-->
+					<div class="inputTxt infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>性别</span>
+						<div class="sexBox">
+							<p><a href="#" class="sexBoy sexActive"><i></i></a> 男</p>
+							<p><a href="#" class="sexBoy"></a> 女</p>
+						</div>
+					</div>
+					
+					<!--电话-->
+					<div class="inputTxt infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>电话</span>
+						<input type="text" class="forTxt"/>
+					</div>
+					
+					<!--邮箱-->
+					<div class="inputTxt infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>电话</span>
+						<input type="text" class="forTxt"/>
+						<!--填写正确时-->
+						<a class="correct">填写正确</a>
+					</div>
+					
+					<!--求职意向-->
+					<div class="inputTxt infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>求职意向</span>
+						<input type="text" class="forTxt"/>
+					</div>
+					
+					<!--最高学历-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>最高学历</span>
+						<div class="forBox infoEndu">
+							<input type="text" class="forTxt" placeholder="大专"/>
+							<a href="javascript:;" class="infoDropBtn"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							<!--最高学历下拉菜单-->
+							<div class="drop endu">
+								<ul class="enduDrop">
+									<li class="inputActive">大专</li>
+									<li>本科</li>
+									<li>硕士</li>
+									<li>博士</li>
+									<li>其它</li>
+								</ul>
+							</div>	
+						</div>
+						<!--毕业时间-->
+						<div class="forBox infoEnduYear">
+							<input type="text" class="forTxt" placeholder="毕业时间"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							
+							<!--毕业时间-->
+							<div class="drop graduationTime clearFix">
+								<div class="years ">
+									<ul>
+										<li class="inputActive">1980</li>
+										<li>1981</li>
+										<li>1982</li>
+										<li>1983</li>
+										<li>1984</li>
+										<li>1985</li>
+										<li>1986</li>
+										<li>1987</li>
+										<li>1988</li>
+										<li>1989</li>
+										<li>1990</li>
+										<li>1991</li>
+										<li>1992</li>
+										<li>1993</li>
+									</ul>
+									<div class="imitateBar">
+										<div></div>
+									</div>	
+								</div>
+								<div class="month">
+									<ul class="clearFix">
+										<li>01月</li>
+										<li>02月</li>
+										<li>03月</li>
+										<li>04月</li>
+										<li>05月</li>
+										<li>06月</li>
+										<li>07月</li>
+										<li>08月</li>
+										<li>09月</li>
+										<li>10月</li>
+										<li class="inputActive">11月</li>
+										<li>12月</li>
+									</ul>
+								</div>	
+							</div>
+						</div>
+					</div>
+					
+					<!--工作年限-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>工作年限</span>
+						<div class="forBox">
+							<input type="text" class="forTxt" placeholder="一年"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							
+							<!--工作年限下拉菜单-->
+							<div class="drop work">
+								<ul class="workYears">
+									<li class="inputActive">一年</li>
+									<li>二年</li>
+									<li>三年</li>
+									<li>四年</li>
+									<li>五年</li>
+									<li>六年</li>
+									<li>七年</li>
+									<li>八年</li>
+									<li>九年</li>
+								</ul>
+								<div class="imitateBar">
+									<div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--所在地-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft"><i class="star">*</i>所在地</span>
+						<div class="forBox">
+							<input type="text" class="forTxt" placeholder="北京"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							
+							<!--所在地下拉框-->
+							<div class="drop city clearFix">
+								<div class="hotCity">
+									<ul>
+										<li class="inputActive">热门城市</li>
+										<li>北京</li>
+										<li>上海</li>
+										<li>广州</li>
+										<li>天津</li>
+										<li>深圳</li>
+										<li>杭州</li>
+										<li>石家庄</li>
+										<li>三亚</li>
+										<li>成都</li>
+										<li>重庆</li>
+									</ul>
+									<div class="imitateBar">
+										<div></div>
+									</div>
+								</div>
+								<div class="cityList">
+									<ul>
+										<li>北京</li>
+										<li>上海</li>
+										<li>广州</li>
+										<li>天津</li>
+										<li>深圳</li>
+										<li>杭州</li>
+										<li>石家庄</li>
+										<li>三亚</li>
+										<li>成都</li>
+										<li>重庆</li>
+										<li>海南</li>
+										<li>山西</li>
+									</ul>
+									<div class="imitateBar">
+										<div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--籍贯-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft">籍贯</span>
+						<div class="forBox">
+							<input type="text" class="forTxt detDropTxt" placeholder="河北"/>
+							
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							<!--籍贯下拉框-->
+							<div class="drop city clearFix">
+								<div class="hotCity">
+									<ul>
+										<li class="inputActive">热门城市</li>
+										<li>北京</li>
+										<li>上海</li>
+										<li>广州</li>
+										<li>天津</li>
+										<li>深圳</li>
+										<li>杭州</li>
+										<li>石家庄</li>
+										<li>三亚</li>
+										<li>成都</li>
+										<li>重庆</li>
+									</ul>
+									<div class="imitateBar">
+										<div></div>
+									</div>
+								</div>
+								<div class="cityList">
+									<ul>
+										<li>北京</li>
+										<li>上海</li>
+										<li>广州</li>
+										<li>天津</li>
+										<li>深圳</li>
+										<li>杭州</li>
+										<li>石家庄</li>
+										<li>三亚</li>
+										<li>成都</li>
+										<li>重庆</li>
+										<li>海南</li>
+										<li>山西</li>
+									</ul>
+									<div class="imitateBar">
+										<div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="#"><img src="../images/info/closeDrop.png" class="closeDrop"/></a>
+						
+					</div>
+					
+					<!--QQ-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft">QQ</span>
+						<input type="text" class="forTxt"/>
+					</div>
+					
+					<!--微信号-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft">微信号</span>
+						<input type="text" class="forTxt"/>
+					</div>
+					
+					<!--生日-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft">生日</span>
+						<div class="forBox infoYear">
+							<input type="text" class="forTxt"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							<!-- 生日-年 -->
+							<div class="drop birthdayY">
+								<ul class="enduDrop">
+									<li class="inputActive">1990年</li>
+									<li>1989年</li>
+									<li>1988年</li>
+									<li>1987年</li>
+									<li>1986年</li>
+								</ul>
+								<div class="imitateBar">
+									<div></div>
+								</div>
+							</div>
+						</div>
+						<div class="forBox infoMonth">
+							<input type="text" class="forTxt"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							<!-- 生日-月 -->
+							<div class="drop birthdayM">
+								<ul class="enduDrop">
+									<li class="inputActive">01月</li>
+									<li>02月</li>
+									<li>03月</li>
+									<li>04月</li>
+									<li>05月</li>
+									<li>11月</li>
+								</ul>
+								<div class="imitateBar">
+									<div></div>
+								</div>
+							</div>
+						</div>
+						<div class="forBox infoDay">
+							<input type="text" class="forTxt"/>
+							<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+							<!-- 生日-月 -->
+							<div class="drop birthdayD">
+								<ul class="enduDrop">
+									<li class="inputActive">01日</li>
+									<li>02日</li>
+									<li>03日</li>
+									<li>04日</li>
+									<li>05日</li>
+									<li>11日</li>
+								</ul>
+								<div class="imitateBar">
+									<div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--社交主页-->
+					<div class="dropDown infoInputTxt clearFix">
+						<span class="inputLeft infoInputLeft">社交主页</span>
+						<div class="social">
+							<ul>
+								<li class="active">
+									<a href="#"><img src="../images/info/social01.png" /></a>
+									<!--选中之后的角标-->
+									<span class="corner"><img src="../images/info/socialActive.png" /></span></li>
+								<li><a href="#"><img src="../images/info/social02.png" /></a></li>
+								<li class="active">
+									<a href="#"><img src="../images/info/social03.png" /></a>
+									<!--选中之后的角标-->
+									<span class="corner"><img src="../images/info/socialActive.png" /></span></li>
+								</li>
+								<li><a href="#"><img src="../images/info/social04.png" /></a></li>
+								<li><a href="#"><img src="../images/info/social05.png" /></a></li>
+								<li><a href="#"><img src="../images/info/social06.png" /></a></li>
+							</ul>
+							<div class="socialDet">
+								<img src="../images/info/social01.png" />
+								<input type="text" class="detTxt"/>
+								<a href="#" class="socialClose"><img src="../images/info/socialClose.png" /></a>
+							</div>
+							<div class="socialDet">
+								<img src="../images/info/social03.png" />
+								<input type="text" class="detTxt detTxtGray"/>
+								<a href="#" class="socialClose"><img src="../images/info/socialClose2.png" /></a>
+							</div>
+						</div>
+					</div>
+				</form>
+				
+				<!--保存取消-->
+				<div class="infoBtn">
+					<a href="#" class="land">保 存</a>
+					<a href="#" class="register">取 消</a>
+				</div>
+			</div>
+		</section>
+		
+								
+		<!--填写完成后的样式-->
+		<section class="infoComp">
+			<div class="compCon">
+				<div class="compDet">
+					<!--头像-->
+					<div class="detPic"><img src="../images/common/enduPro.jpg" /></div>
+					<!--名字性别-->
+					<div class="detName">
+						<span>C.Athins</span>
+						<i>女</i>
+					</div>
+					
+					<!--内容-->
+					<div class="introDetail">
+						<ul>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>生日</p>
+								</div>
+								<div class="detailRight introFirst">
+									<p class="introFirstcon">18745632123123</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>电话</p>
+								</div>
+								<div class="detailRight">
+									<p>黑龙江</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>邮箱</p>
+								</div>
+								<div class="detailRight">
+									<p>广州市黄埔区</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>求职意向</p>
+								</div>
+								<div class="detailRight">
+									<p>weibo.sina.com</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>最高学历</p>
+								</div>
+								<div class="detailRight">
+									<p>丰富的互联网工作经验，精通各种JS技巧与实现，为人和善。</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>工作年限</p>
+								</div>
+								<div class="detailRight">
+									<p>游泳、游戏、电影、羽毛球、读书、健身</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>籍贯</p>
+								</div>
+								<div class="detailRight">
+									<p>游泳、游戏、电影、羽毛球、读书、健身</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>所在地</p>
+								</div>
+								<div class="detailRight">
+									<p>游泳、游戏、电影、羽毛球、读书、健身</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>QQ</p>
+								</div>
+								<div class="detailRight">
+									<p>游泳、游戏、电影、羽毛球、读书、健身</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>微信</p>
+								</div>
+								<div class="detailRight">
+									<p>游泳、游戏、电影、羽毛球、读书、健身</p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+							<li class="clearFix">
+								<div class="detailLeft">
+									<p>社交主页</p>
+								</div>
+								<div class="detailRight intro_last">
+									<p class="introLastcon"><img src="../images/info/social01.png"/></p>
+								</div>
+								<div class="introCircle"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!--底部-->
+		<footer class="foot">
+			<!--底部内容区域-->
+			<div class="fotCon">
+				<!--底部左边logo-->
+				<div class="fotLogo"><a href="#"><img src="../images/common/logo.jpg" /></a></div>
+				<!--底部右边链接、描述-->
+				<div class="fotDesc">
+					<div class="links">
+						<a href="#" class="noPadding">首页</a>
+						<a href="#">课程设置</a>
+						<a href="#">视频教程</a>
+						<a href="#">关于我们</a>
+						<a href="#">联系我们</a>
+						<a href="#">在线留言</a>
+						<a href="#">加入我们</a>
+						<a href="#">常见问题</a>
+						<a href="#" class="noBorder">网站地图</a>
+					</div>
+					<p>京ICP备08102442号 2012MIAOOV.COM版权所有</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

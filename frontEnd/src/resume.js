@@ -11,13 +11,17 @@ import 'element-ui/lib/theme-default/index.css'
 
 import Resume from './Resume.vue'
 
-import Info from "./components/resumeComponent/infoComponent/index.vue"
+import Info from "./components/resumeComponent/infoComponent/formBase/index.vue"
 import Project from "./components/resumeComponent/projectComponent/index.vue"
 import Skill from "./components/resumeComponent/skillComponent/index.vue"
 import Profile from "./components/resumeComponent/profileComponent/index.vue"
 import Work from "./components/resumeComponent/workComponent/index.vue"
 import Education from "./components/resumeComponent/educationComponent/index.vue"
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios);
 
 import store from './store/store.js'
 

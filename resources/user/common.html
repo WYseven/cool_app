@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
 	</head>
 	<body>
 		<!--首页头部-->
@@ -14,7 +14,6 @@
 				<div class="heaLogo">
 					<a href="#" class="logo"><img src="../images/common/healogo.jpg" /></a>
 					<a href="#" class="indexBtn">首页</a>
-					<a href="#" class="indexBtn active">首页</a>
 				</div>
 				<!--右边我的简历、登陆、注册-->
 				<div class="heaRight">
@@ -54,7 +53,7 @@
 					<li><a href="#">个人介绍</a></li>
 					<li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
 					<li  class="noRight"><a href="#">教育经历</a></li>
-				</div>
+				</ul>
 			</div>
 		</nav>
 		
@@ -115,7 +114,7 @@
 			</div>
 			
 			<!--下拉框-->
-			<div class="dropDown">
+			<div class="dropDown clearFix">
 				<span class="inputLeft"><i class="star">*</i>姓名</span>
 				<p class="forBox">
 					<input type="text" class="forTxt"/>
@@ -124,104 +123,164 @@
 			</div>
 			
 			<!--学历下拉框-->
+			<div class="drop endu">
+				<ul class="enduDrop">
+					<li class="inputActive">大专</li>
+					<li>本科</li>
+					<li>硕士</li>
+					<li>博士</li>
+					<li>其它</li>
+				</ul><!-- 
+				<div class="imitateBar">
+					<div></div>
+				</div> -->
+			</div>	
 			
-			<ul class="enduDrop">
-				<li class="inputActive">大专</li>
-				<li>本科</li>
-				<li>硕士</li>
-				<li>博士</li>
-				<li>其它</li>
-			</ul>
 			
-			<!--毕业年限-->
-			<ul class="workYears">
-				<li class="inputActive">一年</li>
-				<li>二年</li>
-				<li>三年</li>
-				<li>四年</li>
-				<li>五年</li>
-				<li>六年</li>
-				<li>七年</li>
-				<li>八年</li>
-				<li>九年</li>
-								
-				<li class="dropBar">
-					<p class="bars"></p>
-				</li>
-			</ul>
-			
-			<!--毕业时间-->
-			<div class="years">
-				<ul class="yearLeft">
-					<li class="inputActive">1980</li>
-					<li>1981</li>
-					<li>1982</li>
-					<li>1983</li>
-					<li>1984</li>
-					<li>1985</li>
-					<li>1986</li>
-					<li>1987</li>
-					<li>1988</li>
-					<li>1989</li>
-					<li>1990</li>
-					<li>1991</li>
-					<li>1992</li>
-					<li>1993</li>
-					<li class="dropBar">
-						<p class="bars"></p>
-					</li>
-				
+			<!--工作年限-->
+			<div class="drop work">
+				<ul class="workYears">
+					<li class="inputActive">一年</li>
+					<li>二年</li>
+					<li>三年</li>
+					<li>四年</li>
+					<li>五年</li>
+					<li>六年</li>
+					<li>七年</li>
+					<li>八年</li>
+					<li>九年</li>
 				</ul>
-				<ul class="yearRight">
-					<li>1月</li>
-					<li>2月</li>
-					<li>3月</li>
-					<li>4月</li>
-					<li>5月</li>
-					<li>6月</li>
-					<li>7月</li>
-					<li>8月</li>
-					<li>9月</li>
-					<li>10月</li>
-					<li class="inputActive">11月</li>
-					<li>12月</li>
-				</ul>
+				<div class="imitateBar">
+					<div></div>
+				</div>
 			</div>
 			
-			<!--热门城市-->
-			<div class="city">
-				<ul class="cityLeft">
-					<li class="inputActive">热门城市</li>
-					<li>北京</li>
-					<li>上海</li>
-					<li>广州</li>
-					<li>天津</li>
-					<li>深圳</li>
-					<li>杭州</li>
-					<li>石家庄</li>
-					<li>三亚</li>
-					<li>成都</li>
-					<li>重庆</li>
-					<li class="dropBar">
-						<p class="bars"></p>
-					</li>
+			
+			<!--毕业时间-->
+			<div class="drop graduationTime clearFix">
+				<div class="years ">
+					<ul>
+						<li class="inputActive">1980</li>
+						<li>1981</li>
+						<li>1982</li>
+						<li>1983</li>
+						<li>1984</li>
+						<li>1985</li>
+						<li>1986</li>
+						<li>1987</li>
+						<li>1988</li>
+						<li>1989</li>
+						<li>1990</li>
+						<li>1991</li>
+						<li>1992</li>
+						<li>1993</li>
+					</ul>
+					<div class="imitateBar">
+						<div></div>
+					</div>	
+				</div>
+				<div class="month">
+					<ul class="clearFix">
+						<li>01月</li>
+						<li>02月</li>
+						<li>03月</li>
+						<li>04月</li>
+						<li>05月</li>
+						<li>06月</li>
+						<li>07月</li>
+						<li>08月</li>
+						<li>09月</li>
+						<li>10月</li>
+						<li class="inputActive">11月</li>
+						<li>12月</li>
+					</ul>
+				</div>	
+			</div>
+			
+			<!--所在地,籍贯-->
+			<div class="drop city clearFix">
+				<div class="hotCity">
+					<ul>
+						<li class="inputActive">热门城市</li>
+						<li>北京</li>
+						<li>上海</li>
+						<li>广州</li>
+						<li>天津</li>
+						<li>深圳</li>
+						<li>杭州</li>
+						<li>石家庄</li>
+						<li>三亚</li>
+						<li>成都</li>
+						<li>重庆</li>
+					</ul>
+					<div class="imitateBar">
+						<div></div>
+					</div>
+				</div>
+				<div class="cityList">
+					<ul>
+						<li>北京</li>
+						<li>上海</li>
+						<li>广州</li>
+						<li>天津</li>
+						<li>深圳</li>
+						<li>杭州</li>
+						<li>石家庄</li>
+						<li>三亚</li>
+						<li>成都</li>
+						<li>重庆</li>
+						<li>海南</li>
+						<li>山西</li>
+					</ul>
+					<div class="imitateBar">
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 技术下来选框 -->
+			<div class="drop skillDrop clearFix">
+				<div class="mainSkills">
+					<ul>
+						<li>开发语言</li>
+						<li>平台框架</li>
+						<li>服务器</li>
+						<li>数据库和缓存</li>
+						<li>开发工具</li>
+						<li>系统设备</li>
+						<li>其他</li>
+					</ul>
+				</div>
+				<div class="branchSkills">
+					<ul class="clearFix">
+						<li>javascript</li>
+						<li>php</li>
+						<li>css</li>
+						<li class="active">php</li>
+						<li>css</li>
+						<li>html</li>
+						<li>java</li>
+						<li>python</li>
+						<li>node.js</li>
+						<li>c</li>
+						<li>golang</li>
+						<li>shell</li>
+						<li>bash</li>
+						<li>bash</li>
+						<li>javascript</li>
+						<li>html</li>
+						<li>java</li>
+						<li>python</li>
+						<li>node.js</li>
+						<li class="dropBar">
+							<p class="bars"></p>
+						</li>
+					</ul>
+					<div class="imitateBar">
+						<div></div>
+					</div>
+				</div>
 				
-				</ul>
-				<ul class="cityRight">
-					<li>北京</li>
-					<li>上海</li>
-					<li>广州</li>
-					<li>天津</li>
-					<li>深圳</li>
-					<li>杭州</li>
-					<li>石家庄</li>
-					<li>三亚</li>
-					<li>成都</li>
-					<li>重庆</li>
-					<li class="dropBar">
-						<p class="bars"></p>
-					</li>
-				</ul>
 			</div>
 		</form>
 		
@@ -231,8 +290,25 @@
 			<a href="#" class="land">保 存</a>
 			<a href="#" class="register">取 消</a>
 		</div>
-		
-		
+		<!-- 添加按钮 -->
+		<div class="addBox addMorePro">添加更多的项目经验 <em class="addIcon"></em></div> 
+
+		<!-- 展示版块的添加按钮 -->
+		<div class="showAdd addMorePro">添加更多的项目经验 <em class="addIcon"></em></div> 
+
+		<!-- 编辑内容 -->
+		<div class="edit">
+			<em></em>
+			<em></em>
+			<div class="deleBox clearFix">
+				<p>确定删除本条信息?</p>
+				<div>
+					<a href="javascript:;">确定</a>
+					<a href="javascript:;">取消</a>
+				</div>
+			</div>
+		</div>
+
 		<!--底部-->
 		<footer class="foot">
 			<!--底部内容区域-->

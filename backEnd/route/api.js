@@ -11,5 +11,4 @@ router.use("/user",require("./user.js"));
 router.use("/info",require("./userInfo.js"));
 
 
-
 module.exports = router;

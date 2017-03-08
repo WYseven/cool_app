@@ -4,3 +4,4 @@
 [0301/180300.933:WARNING:process_snapshot_win.cc(68)] ReadMemory ExceptionInformation failed
 [0301/180300.933:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
 [0301/180300.953:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)
+[0308/115226.500:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)

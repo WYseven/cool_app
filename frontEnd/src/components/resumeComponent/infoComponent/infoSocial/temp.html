@@ -1,0 +1,31 @@
+<div class="dropDown infoInputTxt clearFix">
+    <div class="social">
+        <ul>
+            <li 
+            	v-for="info of companyData" 
+            	:class="{active:info.isWrite}"
+            	@click="info.isWrite = !info.isWrite"
+            >
+                <a href="javascript:;"><img :src="info.companyLog"></a>
+                <!--选中之后的角标-->
+                <span class="corner" v-if="info.isWrite">
+                	<img src="/static/images/info/socialActive.png">
+                </span>
+            </li>
+        </ul>
+        <div class="socialDet" v-for="info,key of companyData" v-if="info.isWrite">
+            <img :src="info.companyLog">
+            <!-- <input type="text" class="detTxt"> -->
+            <el-row>
+			  <el-col :span="18">
+			  	<slot :name="'slot'+key"></slot>
+			  </el-col>
+			  <el-col :span="2">
+					<a href="javascript:;" class="socialClose" @click="info.isWrite = false"></a>
+			  </el-col>
+			</el-row>
+            
+            
+        </div>
+    </div>
+</div>

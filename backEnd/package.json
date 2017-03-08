@@ -16,6 +16,7 @@
     "mongoose": "^4.7.4"
   },
   "devDependencies": {
+    "bluebird": "^3.5.0",
     "supervisor": "^0.12.0"
   }
 }

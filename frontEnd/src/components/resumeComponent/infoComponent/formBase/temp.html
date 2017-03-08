@@ -1,0 +1,126 @@
+<section class="info">
+	<info-prompt 
+		title="请填写真的信息，方便招聘者与您联系。"
+		cls="info"
+	></info-prompt>
+	<div class="infoCon">
+	<div class="headPic">
+		<a href="#" class="headPicBox"><img src="/static/images/info/headPic.png"></a>
+	</div>
+	  <el-form
+	    :model="ruleForm"
+	    :rules="rules"
+	    ref="ruleForm"
+	    label-width="138px"
+	    class="demo-ruleForm"
+	    label-position="left"
+	  >
+	    <el-form-item label="姓名" prop="name" >
+	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
+	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
+	    </el-form-item>
+
+	    <el-form-item label="性别" prop="gender">
+	      <el-radio-group v-model="ruleForm.gender">
+	        <el-radio label="男"></el-radio>
+	        <el-radio label="女"></el-radio>
+	      </el-radio-group>
+	    </el-form-item>
+
+	    <el-form-item label="电话" prop="phone">
+	      <el-input class="name-input" v-model="ruleForm.phone"></el-input>
+	    </el-form-item>
+
+	    <el-form-item label="邮箱" prop='email'>
+	      <el-input class="name-input" v-model="ruleForm.email"></el-input>
+	    </el-form-item>
+	    <el-form-item label="求职意向" prop="intention" >
+	      <el-input class="name-input" v-model="ruleForm.intention"></el-input>
+	    </el-form-item>
+
+	    <el-form-item class="hight" label="最高学历" required >
+	      <el-col :span="7">
+	        <el-form-item prop='education'>
+	          <el-select v-model="ruleForm.education" clearable placeholder="请选择学历">
+	            <el-option :label="item" v-for="item of InfoStaticData.education" :value="item"></el-option>
+	          </el-select>
+	        </el-form-item>
+	      </el-col>
+	      <el-col class="line" :span="2">&nbsp;</el-col>
+	      <el-col :span="7">
+	        <el-form-item prop='graduationTime'>
+	          <el-select v-model="ruleForm.graduationTime" clearable placeholder="请选择学历">
+	            <el-option :label="item" v-for="item of graduationTimeed" :value="item"></el-option>
+	          </el-select>
+	        </el-form-item>
+	      </el-col>
+	    </el-form-item>
+	    
+	    <el-form-item label="工作年限" prop='work' required>
+		    <el-select v-model="ruleForm.work" clearable placeholder="请选择">
+		        <el-option
+		          v-for="item in InfoStaticData.workLife.forwardStep"
+		          :label="item"
+		          :value="item">
+		        </el-option>
+		      </el-select>
+	    </el-form-item>
+	    <el-form-item label="所在地">
+		    <el-cascader
+			  	:options="InfoStaticData.citys"
+			></el-cascader>
+	    </el-form-item>
+	    <el-form-item label="籍贯" prop="originPlace" >
+		    <el-select v-model="InfoStaticData.originPlace" clearable placeholder="请选择">
+		        <!-- <el-option
+		          v-for="item in options"
+		          :label="item.label"
+		          :value="item.value">
+		        </el-option> -->
+		    </el-select>
+	    </el-form-item>
+	    <el-form-item label="QQ" prop="qq" >
+		    <el-input class="name-input" v-model="ruleForm.qq"></el-input>
+	    </el-form-item>
+	    <el-form-item label="微信号" prop="mchat" >
+		    <el-input class="name-input" v-model="ruleForm.mchat"></el-input>
+	    </el-form-item>
+	    <el-form-item label="生日" prop='birthday' >
+		    <!-- <el-cascader
+		      :options="options"
+		      v-model="birthday"
+		    ></el-cascader> -->
+	    </el-form-item>
+	    <el-form-item label="姓名" prop="name" >
+	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
+	    </el-form-item>
+	    <el-form-item label="社交主页" prop="url">
+	    	<info-social>
+	    		<el-input slot='slot1' class="name-input" v-model="ruleForm.url"></el-input>
+	    		<el-input slot='slot2' class="name-input" v-model="ruleForm.url2"></el-input>
+	    	</info-social>
+	    	
+	    </el-form-item>
+			
+	    <el-form-item>
+	      <el-button 
+	      	class="reset-button-style reset-button-color" 
+	      	type="primary"
+	      	@click="submitForm('ruleForm')"
+	      >
+	      	保存
+	      </el-button>
+	      <el-button 
+	      	class='reset-button-style reset-button-border' 
+	      	style="margin-left: 35px;" 
+	      	click="resetForm('ruleForm')"
+	      >
+
+	      重置
+
+	      </el-button>
+	    </el-form-item>
+	  </el-form>
+	</div>
+	<info-show></info-show>
+</section>

@@ -14,7 +14,7 @@ var userInfo = new schema({
     /*avatar:{
         type:String
     },*/
-    realName:{
+    name:{
         require:true,
         type:String
     },
@@ -23,7 +23,7 @@ var userInfo = new schema({
         type:String,
         default:"male"
     },
-    telephone:{
+    phone:{
         require:true,
         type:String
     },

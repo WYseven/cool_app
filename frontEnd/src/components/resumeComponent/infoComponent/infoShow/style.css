@@ -1,0 +1,117 @@
+
+.infoComp{
+	width:1000px;
+	margin:20px auto 30px; 
+}
+.compCon{
+	width:710px;
+	background-color:#fff;
+	padding:20px;
+}
+.compDet{
+	background-color:#f9fafb;
+	border:1px dashed #e4e9ed;
+	padding-top:20px;
+}
+.detPic{
+	width:120px;
+	height:120px;
+	border-radius: 60px;
+	margin:0px auto 14px;
+}
+.detPic img{
+	width:100%;
+	height:100%;
+	border-radius: 120px;
+}
+/*名字性别*/
+.detName{
+	height:28px;
+	line-height:28px;
+	text-align: center;
+}
+.detName span{
+	font-size:20px;
+	color:#707a87;
+	display: inline-block;
+	margin-right:16px;
+}
+.detName i{
+	width:50px;
+	height:28px;
+	border-radius: 14px;
+	background-color:#e4e9ed;
+	display: inline-block;
+	text-align: center;
+	font-style: normal;
+	color:#707a87;
+	vertical-align: top;
+}
+
+/*内容区域*/
+.introDetail {
+	font-size:14px;
+	padding-bottom:10px;
+}
+.introDetail li {
+	clear: both;
+	position: relative;
+}
+.introDetail .dashedline {
+	border-left: 1px dashed #2e3039;
+	width: 0px;
+	height: 30px;
+	margin: 0 66px;
+}
+.introRight .pic {
+	float: left;
+	margin-right: 25px;
+	width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.introCircle {
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	position: absolute;
+	left: 337px;
+	top: 20px;
+	background-color: #949fab;
+}
+.detailLeft {
+	width:330px;
+	float: left;
+	margin-right: 10px;
+}
+.detailLeft p {
+	line-height: 48px;
+	text-align: right;
+	color: #949fab;
+}
+.detailRight {
+	float: left;
+	width: 342px;
+	padding-left: 15px;
+	border-left: 2px solid #eff1f3;
+}
+.detailRight p {
+	color: #707a87;
+	line-height: 48px;
+}
+
+.introFirst {
+	margin-top: 20px;
+}
+.introFirstcon {
+	margin-top: -20px;
+}
+.introLast {
+	margin-bottom: 20px;
+}
+.introLastcon {
+	margin-bottom: -20px;
+}
+.introLastcon img{
+	margin-top:7px;
+}

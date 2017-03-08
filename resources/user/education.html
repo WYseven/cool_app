@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>教育经历</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/edu.css" />
+</head>
+<body>
+<!--登陆后首页-->
+<header class="topHeader">
+	<div class="headerCon">
+		<!--左边logo-->
+		<div class="heaLogo">
+			<a href="#" class="logo loginLogo"><img src="../images/common/healogo.jpg" /></a>
+			<a href="#" class="resumeFill">简历填写</a>
+			<a href="#" class="indexBtn">首页</a>
+		</div>
+		<!--右边我的简历、登陆、注册-->
+		<div class="heaRight loginHeaRight">
+			<a href="#" class="posResume">发布简历</a>
+			<a href="#" class="user"></a>
+			<a href="#" class="userName">C.Atkins</a>
+			<a href="#" class="relase"></a>
+		</div>
+	</div>
+</header>
+<!--导航-->
+<nav class="navigation">
+	<div class="navCon">
+		<ul class="navConLeft">
+			<li><a href="#">基本信息</a><span href="#" class="mustOptions"></span></li>
+			<li><a href="#">项目经验</a></li>
+			<li><a href="#">技能评估</a></li>
+			<li><a href="#">个人介绍</a></li>
+			<li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
+			<li  class="noRight"><a href="#">教育经历</a></li>
+		</ul>
+	</div>
+</nav>
+<!--提示填写信息-->
+<section class="prompt">
+	<div class="promptCon eduTxt">
+		<!--教育经历文字-->
+		招聘的人很乐意看到您有工作经历，请认真填写。如果没有工作经历，可填写自己的项目经验。
+	</div>
+	<!--预览简历-->
+	<div class="preResume">
+		<div class="preview">预览简历</div>
+		<div class="proBar">
+			<p><span>简历完成度</span> <strong>30%</strong></p>
+			<div class="progress">
+				<div class="bar">
+					<img src="../images/common/progress.png" / class="ball">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- 教育经历编辑 -->
+<section class="eduExperience">
+	<div class="eduCon">
+		<form action="">
+			<div class="inputTxt eduInputTxt">
+				<span class="inputLeft"><i class="star">*</i>学校</span>
+				<input type="text" class="forTxt"/>
+				<!--文本框为空时-->
+				<!-- <a class="empty">姓名不能为空</a> -->
+				<!--填写正确时-->
+				<!-- <a class="correct">填写正确</a> -->
+			</div>
+			<div class="inputTxt clearFix">
+				<span class="inputLeft"><i class="star">*</i>专业</span>
+				<input type="text" class="forTxt"/>
+				<!--文本框为空时-->
+				<!-- <a class="empty">姓名不能为空</a> -->
+				<!--填写正确时-->
+				<!-- <a class="correct">填写正确</a> -->
+			</div>
+			<div class="dropDown clearFix">
+				<span class="inputLeft"><i class="star">*</i>学历</span>
+				<div class="forBox">
+					<input type="text" class="forTxt"/>
+					<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+					<!--学历下拉框-->
+					<div class="drop endu">
+						<ul class="enduDrop">
+							<li class="inputActive">大专</li>
+							<li>本科</li>
+							<li>硕士</li>
+							<li>博士</li>
+							<li>其它</li>
+						</ul><!-- 
+						<div class="imitateBar">
+							<div></div>
+						</div> -->
+					</div>
+				</div>
+				
+			</div>
+			<div class="dropDown clearFix">
+				<span class="inputLeft"><i class="star">*</i>毕业时间</span>
+				<div class="forBox">
+					<input type="text" class="forTxt"/>
+					<a href="#"><img src="../images/common/dropDown.png" class="dropPic"/></a>
+					<!--学历下拉框-->
+					<div class="drop graduationTime clearFix">
+						<div class="years ">
+							<ul>
+								<li class="inputActive">1980</li>
+								<li>1981</li>
+								<li>1982</li>
+								<li>1983</li>
+								<li>1984</li>
+								<li>1985</li>
+								<li>1986</li>
+								<li>1987</li>
+								<li>1988</li>
+								<li>1989</li>
+								<li>1990</li>
+								<li>1991</li>
+								<li>1992</li>
+								<li>1993</li>
+							</ul>
+							<div class="imitateBar">
+								<div></div>
+							</div>	
+						</div>
+						<div class="month">
+							<ul class="clearFix">
+								<li>01月</li>
+								<li>02月</li>
+								<li>03月</li>
+								<li>04月</li>
+								<li>05月</li>
+								<li>06月</li>
+								<li>07月</li>
+								<li>08月</li>
+								<li>09月</li>
+								<li>10月</li>
+								<li class="inputActive">11月</li>
+								<li>12月</li>
+							</ul>
+						</div>	
+					</div>
+				</div>
+				
+			</div>
+		</form>	
+		<!--保存取消-->
+		<div class="infoBtn">
+			<a href="#" class="land">保 存</a>
+			<a href="#" class="register">取 消</a>
+		</div>
+		<div class="addBox addMorePro">添加更多的项目经验 <em class="addIcon"></em></div>	
+	</div>
+</section>
+
+<!-- 展示教育经历 -->
+<section class="warp">
+	<section class="showEdu">
+		<div class="showAdd addMorePro">添加更多的项目经验 <em class="addIcon"></em></div>
+		<div>
+			<p class="ProTitle">教育经历展示</p>
+			<ul class="clearFix">
+				<li>
+					<p class="showEduTitle">北京科技大学</p>
+					<p><span>本科</span> * <span>电子商务</span></p>
+					<p><span>2015</span>年毕业</p>
+					<div class="edit">
+						<em></em>
+						<em></em>
+						<div class="deleBox clearFix">
+							<p>确定删除本条信息?</p>
+							<div>
+								<a href="javascript:;">确定</a>
+								<a href="javascript:;">取消</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<p class="showEduTitle">北京科技大学</p>
+					<p><span>本科</span> * <span>电子商务</span></p>
+					<p><span>2015</span>年毕业</p>
+					<div class="edit">
+						<em></em>
+						<em></em>
+						<div class="deleBox clearFix">
+							<p>确定删除本条信息?</p>
+							<div>
+								<a href="javascript:;">确定</a>
+								<a href="javascript:;">取消</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>	
+		</div>
+		
+	</section>
+	
+</section>
+<!--底部-->
+<footer class="foot">
+	<!--底部内容区域-->
+	<div class="fotCon">
+		<!--底部左边logo-->
+		<div class="fotLogo"><a href="#"><img src="../images/common/logo.jpg" /></a></div>
+		<!--底部右边链接、描述-->
+		<div class="fotDesc">
+			<div class="links">
+				<a href="#" class="noPadding">首页</a>
+				<a href="#">课程设置</a>
+				<a href="#">视频教程</a>
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">在线留言</a>
+				<a href="#">加入我们</a>
+				<a href="#">常见问题</a>
+				<a href="#" class="noBorder">网站地图</a>
+			</div>
+			<p>京ICP备08102442号 2012MIAOOV.COM版权所有</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
