@@ -1,6 +1,6 @@
 /*社交主页*/
-.social{/*
-	width:446px;*/
+.social{
+	width:446px;
 	float: left;
 }
 .social li{
@@ -12,7 +12,8 @@
 	position: relative;
 }
 .social .active{
-	border:2px solid #e15671;	
+	border:2px solid #e15671;
+	margin:-2px 22px 0 -2px;	
 }
 .social .corner{
 	width:16px;
@@ -33,19 +34,23 @@
 	margin-right:10px;
 }
 .socialDet .detTxt{
-	width:274px;
+	width:318px;
 	height:32px;
 	line-height: 32px;
-	border:1px solid #e15671;
 	float:left;
 	border-radius: 2px;
 	padding-left:5px;
 }
+
+.socialDet .detTxt input {
+	width: 100%;
+}
+
 .socialClose{
 	width:24px;
 	height:24px;
 	float: left;
-	margin:6px 0px 0px 10px;
+	margin-top:5px;
 	background-image: url('/static/images/info/socialClose.png');
 }
 .socialClose:hover{

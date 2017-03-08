@@ -65,3 +65,6 @@
 .el-icon-caret-top:before{
   content: "\E603";
 }
+.el-icon-caret-bottom:before{
+  content: "\E600";
+}
