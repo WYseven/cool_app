@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工作经历</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/work.css" />
+	</head>
+	<body>
+		<!--登陆后首页-->
+		<header class="topHeader">
+			<div class="headerCon">
+				<!--左边logo-->
+				<div class="heaLogo">
+					<a href="#" class="logo loginLogo"><img src="../images/common/healogo.jpg" /></a>
+					<a href="#" class="resumeFill">简历填写</a>
+					<a href="#" class="indexBtn">首页</a>
+				</div>
+				<!--右边我的简历、登陆、注册-->
+				<div class="heaRight loginHeaRight">
+					<a href="#" class="posResume">发布简历</a>
+					<a href="#" class="user"></a>
+					<a href="#" class="userName">C.Atkins</a>
+					<a href="#" class="relase"></a>
+				</div>
+			</div>
+		</header>
+		
+		<!--导航-->
+		<nav class="navigation">
+			<div class="navCon">
+				<ul class="navConLeft">
+					<li><a href="#">基本信息</a><span href="#" class="mustOptions"></span></li>
+					<li><a href="#">项目经验</a></li>
+					<li><a href="#">技能评估</a></li>
+					<li><a href="#">个人介绍</a></li>
+					<li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
+					<li  class="noRight"><a href="#">教育经历</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--提示填写信息及预览简历-->
+		<section class="prompt">
+			<div class="promptCon  workPro">
+				<!--个人介绍文字-->
+				招聘的人很乐意看到您有工作经历，请认真填写。如果没有工作经历，可填写自己的项目经验。
+			</div>
+			
+			<!--预览简历-->
+			<div class="preResume">
+				<div class="preview">预览简历</div>
+				<div class="proBar">
+					<p><span>简历完成度</span> <strong>30%</strong></p>
+					<div class="progress">
+						<div class="bar">
+							<img src="../images/common/progress.png" / class="ball">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!--所在公司-->
+		<section class="company">
+			<div class="companyCon">
+				<form>
+					<!--公司名称-->
+					<div class="inputTxt comInputTxt">
+						<span class="inputLeft comInputLeft"><i class="star">*</i>公司</span>
+						<input type="text" class="forTxt comForTxt"/>
+					</div>
+					
+					<!--职位-->
+					<div class="inputTxt comInputTxt">
+						<span class="inputLeft comInputLeft"><i class="star">*</i>职位</span>
+						<input type="text" class="forTxt comForTxt"/>
+					</div>
+					
+					<!--在职时间-->
+					<div class="inputTxt comInputTxt">
+						<span class="inputLeft comInputLeft"><i class="star">*</i>在职时间</span>
+						<div class="forBox comForTxt startYear">
+							<input type="text" class="forTxt"/>
+							<a href="javascript:;" class="dropPic"><img src="../images/common/dropDown.png" /></a>
+						</div>
+						<div class="comLine">~</div>
+						<div class="forBox comForTxt  endYear">
+							<input type="text" class="forTxt"/>
+							<a href="javascript:;" class="dropPic"><img src="../images/common/dropDown.png" /></a>
+						</div>
+						
+					</div>
+					
+					<!--工作描述-->
+					<div class="inputTxt workArea clearFix">
+						<span class="inputLeft comInputLeft"><i class="star">*</i>工作描述</span>
+						<textarea class="workDesc"></textarea>
+					</div>
+					
+					<!--公司logo-->
+					<a class="comLogo">
+						<span class="logoAdd">+</span>
+						<span class="logoTxt">公司LOGO</span>
+					</a>
+				</form>
+				
+				<!--保存取消-->
+				<div class="infoBtn">
+					<a href="#" class="land">保 存</a>
+					<a href="#" class="register">取 消</a>
+				</div>
+			</div>
+		</section>
+		
+		<!--添加新的工作经历-->
+		<section class="addWork">
+			<div class="addWorkCon">
+				<div class="showAdd addMorePro">添加新的工作经历 <em class="addIcon"></em></div> 
+				<div class="workShow">
+					<p class="ProTitle">教育经历展示</p>
+					<!--工作经历编辑-->
+					<div class="workShowEdit">	
+						<div class="timelineTop">
+							<div class="dot"></div>
+							<div class="line"></div>
+						</div>
+						
+						<div class="experDetail">
+							<div class="clearFix">
+								<div class="timeBall">
+									<div class="icon"><img src="../images/work/expre_bgL_edit.png"></div>
+								</div>
+								<div class="titleWord">
+									<p class="date">
+										<span>2015.10.09~至今</span>
+										<span class="workCircle"></span>
+									</p>
+									<div class="companyDes">
+										<h4>广州市千钧网络科技有限公司</h4>
+										<p>前端开发工程师</p>
+									</div>
+								</div>
+							</div>
+							<div class="itemCon">
+								<p>前端负责人。搭建了前端的整体构架</p>
+								<p>包括：制定前端静态资源目录结构和代码发布流程；根据前者开发代码构建工具，简化发布操作；开发前后端中间平台，分离前后端职责，提高开发效率。此外，还负责美黛拉App内嵌页面和PC网站的开发。</p>
+								<div class="itemCircle"></div>
+							</div>
+						</div>
+						<!-- 编辑内容 -->
+						<div class="edit">
+							<em></em>
+							<em></em>
+							<div class="deleBox clearFix">
+								<p>确定删除本条信息?</p>
+								<div>
+									<a href="javascript:;">确定</a>
+									<a href="javascript:;">取消</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--工作经历正常展示-->
+				<div class="workShowNor">
+					<div class="experDetail">	
+						<div class="experLine"></div>
+						<div class="clearFix">
+							<div class="timeBall">
+								<div class="icon"><img src="../images/work/expre_bgL.png"></div>
+							</div>
+							<div class="titleWord">
+								<p class="date">
+									<span>2015.10.09~至今</span>
+									<span class="workCircle"></span>
+								</p>
+								<div class="companyDes">
+									<h4>广州市千钧网络科技有限公司</h4>
+									<p>前端开发工程师</p>
+								</div>
+							</div>
+						</div>
+						<div class="itemCon">
+							<p>前端负责人。搭建了前端的整体构架</p>
+							<p>包括：制定前端静态资源目录结构和代码发布流程；根据前者开发代码构建工具，简化发布操作；开发前后端中间平台，分离前后端职责，提高开发效率。此外，还负责美黛拉App内嵌页面和PC网站的开发。</p>
+							<div class="itemCircle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--底部-->
+		<footer class="foot">
+			<!--底部内容区域-->
+			<div class="fotCon">
+				<!--底部左边logo-->
+				<div class="fotLogo"><a href="#"><img src="../images/common/logo.jpg" /></a></div>
+				<!--底部右边链接、描述-->
+				<div class="fotDesc">
+					<div class="links">
+						<a href="#" class="noPadding">首页</a>
+						<a href="#">课程设置</a>
+						<a href="#">视频教程</a>
+						<a href="#">关于我们</a>
+						<a href="#">联系我们</a>
+						<a href="#">在线留言</a>
+						<a href="#">加入我们</a>
+						<a href="#">常见问题</a>
+						<a href="#" class="noBorder">网站地图</a>
+					</div>
+					<p>京ICP备08102442号 2012MIAOOV.COM版权所有</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

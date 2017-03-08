@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>技能评估</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/skill.css" />
+	</head>
+	<body>
+		<!--登陆后首页-->
+		<header class="topHeader">
+			<div class="headerCon">
+				<!--左边logo-->
+				<div class="heaLogo">
+					<a href="#" class="logo loginLogo"><img src="../images/common/healogo.jpg" /></a>
+					<a href="#" class="resumeFill">简历填写</a>
+					<a href="#" class="indexBtn">首页</a>
+				</div>
+				<!--右边我的简历、登陆、注册-->
+				<div class="heaRight loginHeaRight">
+					<a href="#" class="posResume">发布简历</a>
+					<a href="#" class="user"></a>
+					<a href="#" class="userName">C.Atkins</a>
+					<a href="#" class="relase"></a>
+				</div>
+			</div>
+		</header>
+		
+		<!--导航-->
+		<nav class="navigation">
+			<div class="navCon">
+				<ul class="navConLeft">
+					<li><a href="#">基本信息</a><span href="#" class="mustOptions"></span></li>
+					<li><a href="#">项目经验</a></li>
+					<li><a href="#">技能评估</a></li>
+					<li><a href="#">个人介绍</a></li>
+					<li><a href="#">工作经历</a><span href="#" class="noOptions"></span></li>
+					<li  class="noRight"><a href="#">教育经历</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--提示填写信息及预览简历-->
+		<section class="prompt">
+			<div class="promptCon  skillPro">
+				<!--技能评估文字-->
+				评估自己的技能掌握情况，能够让让招聘者更直观的看到你掌握技能的程度，希望能认真对待。
+			</div>
+			
+			<!--预览简历-->
+			<div class="preResume">
+				<div class="preview">预览简历</div>
+				<div class="proBar">
+					<p><span>简历完成度</span> <strong>30%</strong></p>
+					<div class="progress">
+						<div class="bar">
+							<img src="../images/common/progress.png" / class="ball">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!--skills-->
+		<section class="skills">
+			<div class="skillsCon">
+				<div class="skiDet clearFix">
+					<div class="sconLeft">选择技能</div>
+					<div class="sconRight">
+						<input type="tetx" class="forTxt" placeholder="技能只能写一项,需要展示其它技能,请添加" />
+					</div>
+				</div>
+				<div class="skiDet clearFix skiDistan">
+					<div class="sconLeft">熟练程度</div>
+					<div class="sconRight">
+						<div class="progress">
+							<div class="bar">
+								<img src="../images/common/progress.png" / class="ball">
+								<div class="persent">30%</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="skiDet clearFix">
+					<div class="sconLeft">技能描述</div>
+					<div class="sconRight">
+						<p class="txtDet">熟练掌握各类语义化标签</p>
+						<div class="skiForBox">
+							<input type="tetx" class="forTxt skiForTxt" value="熟练掌握各类语义化标签" />
+							<a href="#" class="skiDele"></a>
+						</div>
+						<div class="addBox addMorePro">点击添加技能描述，回车即提交 <em class="addIcon"></em></div> 
+						
+						<div class="infoBtn">
+							<a href="#" class="land">保 存</a>
+							<a href="#" class="register">取 消</a>
+						</div>
+						<div class="addBox addMorePro">添加更多的技能 <em class="addIcon"></em></div> 
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!--添加一项技能,技能展示-->
+		<section class="addSkills">
+			<div class="addSkiCon">
+				<div class="showAdd addMorePro">添加更多的项目经验 <em class="addIcon"></em></div>
+				
+				<!--技能展示-->
+				<div class="skillShow">
+					<h3 class="skiTitle">技能展示</h3>
+					<div class="skiShowEdit">
+						<p class="editTitle">HTML5</p>
+						<div class="skiShowBar">
+							<div class="showBar">100%</div>
+						</div>
+						<ul class="showList">
+							<li>尝试写过 3D效果 阴影渐变</li>
+							<li>尝试写过 3D效果 阴影渐变</li>
+						</ul>
+						<!-- 编辑内容 -->
+						<div class="edit">
+							<em></em>
+							<em></em>
+							<div class="deleBox clearFix">
+								<p>确定删除本条信息?</p>
+								<div>
+									<a href="javascript:;">确定</a>
+									<a href="javascript:;">取消</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="skiShowCon">
+						<p class="editTitle">HTML5</p>
+						<div class="skiShowBar">
+							<div class="showBar">100%</div>
+						</div>
+						<ul class="showList">
+							<li>尝试写过 3D效果 阴影渐变</li>
+							<li>尝试写过 3D效果 阴影渐变</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--底部-->
+		<footer class="foot">
+			<!--底部内容区域-->
+			<div class="fotCon">
+				<!--底部左边logo-->
+				<div class="fotLogo"><a href="#"><img src="../images/common/logo.jpg" /></a></div>
+				<!--底部右边链接、描述-->
+				<div class="fotDesc">
+					<div class="links">
+						<a href="#" class="noPadding">首页</a>
+						<a href="#">课程设置</a>
+						<a href="#">视频教程</a>
+						<a href="#">关于我们</a>
+						<a href="#">联系我们</a>
+						<a href="#">在线留言</a>
+						<a href="#">加入我们</a>
+						<a href="#">常见问题</a>
+						<a href="#" class="noBorder">网站地图</a>
+					</div>
+					<p>京ICP备08102442号 2012MIAOOV.COM版权所有</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
