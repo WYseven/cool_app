@@ -51,6 +51,8 @@ module.exports = class Initiate {
                 return;
             }
 
+
+
             //通过m找到控制器
 
             let controller_path = GLOBALPATH.CONTROLLER_PATH;
@@ -61,10 +63,12 @@ module.exports = class Initiate {
             try{
                 C = require(controller_file_path)
             }catch(e){
-
+                console.log(e)
                 res.end();
                 return;
             }
+
+
 
             let controller = new C();
 

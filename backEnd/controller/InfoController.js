@@ -1,6 +1,8 @@
 /**
  * Created by wangyun on 17/3/8.
  */
+const path = require('path');
+const Model = require(path.resolve(GLOBALPATH.MODEL_PATH,'Model'))
 
 module.exports = class Info {
     constructor(){
@@ -8,9 +10,16 @@ module.exports = class Info {
     }
 
     saveAction(req,res){
-        console.log("保存")
-        
-        res.send("saveok");
+
+
+
+        var m = new Model("Info");
+
+        m.save({name:'leo'}).then(function(){
+            res.send("saveok");
+        })
+
+
         
     }
 }

@@ -9,7 +9,7 @@ exports.db = {
     host:'mongodb://localhost',
     user:"root",
     password:'',
-    database:'myapp',
+    database:'cool_resume',
     port:'27017',
     charset:'utf-8'
 }
@@ -22,5 +22,6 @@ exports.path = {
     ROOT_path:ROOT,
     CONFING_PATH:path.resolve(ROOT,'config'),
     CONTROLLER_PATH:path.resolve(ROOT,'controller'),
-    LIB_PATH:path.resolve(ROOT,'lib')
+    LIB_PATH:path.resolve(ROOT,'lib'),
+    MODEL_PATH:path.resolve(ROOT,'common/model'),
 }
