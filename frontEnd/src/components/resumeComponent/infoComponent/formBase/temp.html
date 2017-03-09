@@ -3,10 +3,7 @@
 		title="请填写真的信息，方便招聘者与您联系。"
 		cls="info"
 	></info-prompt>
-	<div class="infoCon">
-	<div class="headPic">
-		<a href="#" class="headPicBox"><img src="/static/images/info/headPic.png"></a>
-	</div>
+	<div class="infoCon" v-show='isEditorShow'>
 	  <el-form
 	    :model="ruleForm"
 	    :rules="rules"
@@ -15,8 +12,11 @@
 	    class="demo-ruleForm"
 	    label-position="left"
 	  >
+	  	<!--上传头像-->
+		<div class="headPic">
+			<a href="#" class="headPicBox"><img src="/static/images/info/headPic.png"></a>
+		</div>
 	    <el-form-item label="姓名" prop="name" >
-	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
 	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
 	    </el-form-item>
 
@@ -38,7 +38,7 @@
 	      <el-input class="name-input" v-model="ruleForm.intention"></el-input>
 	    </el-form-item>
 
-	    <el-form-item class="hight" label="最高学历" required >
+	    <el-form-item class="hight" label="最高学历" >
 	      <el-col :span="7">
 	        <el-form-item prop='education'>
 	          <el-select v-model="ruleForm.education" clearable placeholder="请选择学历">
@@ -56,7 +56,7 @@
 	      </el-col>
 	    </el-form-item>
 	    
-	    <el-form-item label="工作年限" prop='work' required>
+	    <el-form-item label="工作年限" prop='work'>
 		    <el-select v-model="ruleForm.work" clearable placeholder="请选择">
 		        <el-option
 		          v-for="item in InfoStaticData.workLife.forwardStep"
@@ -91,17 +91,27 @@
 		      v-model="birthday"
 		    ></el-cascader> -->
 	    </el-form-item>
-	    <el-form-item label="姓名" prop="name" >
-	      <el-input class="name-input" v-model="ruleForm.name"></el-input>
-	    </el-form-item>
-	    <el-form-item label="社交主页" prop="url">
+	    <el-form-item label="社交主页">
 	    	<info-social>
-	    		<el-input slot='slot1' class="name-input" v-model="ruleForm.url"></el-input>
-	    		<el-input slot='slot2' class="name-input" v-model="ruleForm.url2"></el-input>
+	    		<template scope="props">
+	    			<div class="socialDet" v-for="info,key of props.companyData" v-if="info.isWrite" >
+			            <img :src="info.companyLog">
+			            <el-row>
+						  <el-col :span="18" >
+						  		<el-form-item prop="companyUrl" >
+						      		<el-input class="name-input" v-model="ruleForm.companyUrl">
+						      			
+						      		</el-input>
+						    </el-form-item>
+						  </el-col>
+						  <el-col :span="2">
+								<a href="javascript:;" class="socialClose" @click="info.isWrite = false"></a>
+						  </el-col>
+						</el-row>
+			        </div>
+	    		</template>
 	    	</info-social>
-	    	
-	    </el-form-item>
-			
+    	</el-form-item>
 	    <el-form-item>
 	      <el-button 
 	      	class="reset-button-style reset-button-color" 
@@ -122,5 +132,5 @@
 	    </el-form-item>
 	  </el-form>
 	</div>
-	<info-show></info-show>
+	<info-show v-if="isInfoShow" @editor='editorHandle' :ruleForm="ruleForm"></info-show>
 </section>

@@ -1,5 +1,6 @@
 <div class="compCon">
 	<div class="compDet">
+	<p @click="editor">编辑</p>
 		<!--头像-->
 		<div class="detPic"><img src="/static/images/common/enduPro.jpg"></div>
 		<!--名字性别-->
@@ -10,17 +11,22 @@
 		
 		<!--内容-->
 		<div class="introDetail">
+
 			<ul>
-				<li class="clearFix">
+
+				<li 
+					class="clearFix" 
+					v-for="item of ruleFormFilted"
+				>
 					<div class="detailLeft">
-						<p>生日</p>
+						<p>{{item.title}}</p>
 					</div>
 					<div class="detailRight introFirst">
-						<p class="introFirstcon">18745632123123</p>
+						<p class="introFirstcon">{{item.value}}</p>
 					</div>
 					<div class="introCircle"></div>
 				</li>
-				<li class="clearFix">
+				<!-- <li class="clearFix">
 					<div class="detailLeft">
 						<p>电话</p>
 					</div>
@@ -109,7 +115,7 @@
 						<p class="introLastcon"><img src="/static/images/info/social01.png"></p>
 					</div>
 					<div class="introCircle"></div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>

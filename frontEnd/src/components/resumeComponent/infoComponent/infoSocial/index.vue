@@ -38,17 +38,9 @@ let companyData = [
 
  export default {
  	name:'infoSocial',
- 	props:["value"],
  	computed:{
- 		abc(){
- 			console.log(this.value);
- 			return this.value;
- 		}
  	},
  	methods:{
- 		inputs(){
- 			this.$emit("input",this.abc);
- 		}
  	},
  	data(){
  		return {

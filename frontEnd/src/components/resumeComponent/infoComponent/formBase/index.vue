@@ -24,6 +24,11 @@ export default {
             throw new Error("没有对应的验证规则");
           }
           return function (rule, value, callback){
+              //字段不是必填并且没有填写，则可以验证通过
+              if(!rule.required && !value){
+                callback();
+                return;
+              }
               if(validator[type].test(value)){
                  callback();
               }else{
@@ -31,24 +36,25 @@ export default {
               }
           }
       }
-
-
       return {
-        ruleForm:{
-          name:'',
-          gender:"",
-          user:"leo",
-          education:"", //最高学历
-          graduationTime:'',//毕业时间
-          work:'',//工作年限
-          seat:'',//所在地
-          originPlace:'', //籍贯
-          qq:'',
-          mchat:'',
-          birthday:'',
-          url:""
-          
-        },
+        isInfoShow:false,
+        isEditorShow:true,
+        ruleForm:Object.assign(InfoStaticData.ruleForm,{
+          name:'王允123',
+          gender:"性别",
+          phone:"18612987504",
+          email:'18612987504@qq.com',
+          intention:"web前端",
+          education:"初中", 
+          graduationTime:'2017/10',
+          work:'10',
+          seat:'北京',
+          originPlace:'北京', 
+          qq:'2214455245',
+          mchat:'2214455245',
+          birthday:'1990/11/13',
+          companyUrl:'社交主页'
+        }),  //表单字段
         InfoStaticData,
         rules:{
           name:[
@@ -56,42 +62,38 @@ export default {
             { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
           ],
           gender:[
-            {required:true,message: '请选择性别', trigger: 'change'}
+            {required:false,message: '请选择性别', trigger: 'change'}
           ],
           phone:[
-            {required:true,message: '请填写电话号码', trigger: 'change'},
+            {required:false,message: '请填写电话号码', trigger: 'change'},
             {validator: validatorFunc('phone','请填写正确的手机号码'),trigger: 'blur,change'}
           ],
           email:[
-            {required:true,message: '请填写邮箱', trigger: 'change'},
+            {required:false,message: '请填写邮箱', trigger: 'change'},
             { type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur,change' }
           ],
           intention:[
-            {required:true,message: '请填写求职意向', trigger: 'change'}
+            {required:false,message: '请填写求职意向', trigger: 'change'}
           ],
           education:[ //最高学历必填
-            {required:true,message: '请填写最高学历',}
+            {required:false,message: '请填写最高学历',}
           ],
           graduationTime:[ //最高学历必填
-            {required:true,message: '请填写毕业时间',}
+            {required:false,message: '请填写毕业时间',}
           ],
           work:[ //最高学历必填
-            {required:true,message: '请填写工作年限',}
+            {required:false,message: '请填写工作年限',}
           ],
           seat:[ //所在地
-            {required:true,message: '请填写所在地',}
+            {required:false,message: '请填写所在地',}
           ],
           qq:[
-            {validator:validatorFunc('qq','请填写正确的qq号码'),trigger: 'blur,change'}
+            {required:false},
+            {required:false,validator:validatorFunc('qq','请填写正确的qq号码'),trigger: 'blur,change'}
           ],
-          url:[
+          companyUrl:[
             {
-              required:true,message:"请输入网址",trigger: 'blur,change'
-            }
-          ],
-          url2:[
-            {
-              required:true,message:"请输入网址",trigger: 'blur,change'
+              required:false,message:"请输入网址",trigger: 'blur,change'
             }
           ]
         }
@@ -107,19 +109,19 @@ export default {
           arr.push(currentTime-n);
           n++;
         }
-        console.log(currentTime);
         return arr;
       }
     },
     methods:{
       submitForm(formName){
-        this.$refs[formName].validateField('url',function (valid){
-            console.log(123);
-            console.log(valid);
-        });
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            
+            this.isEditorShow = false;
+            document.body.scrollTop = 0;
+            setTimeout(()=>{
+              this.isInfoShow = true;
+              
+            },1000)
             /*this.$store.dispatch("request-info-save",{
               url:'save',
               data:this.ruleForm
@@ -132,6 +134,10 @@ export default {
             return false;
           }
         });
+      },
+      editorHandle(){
+        this.isEditorShow = true;
+        this.isInfoShow = false;
       }
     }
 }
