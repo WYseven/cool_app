@@ -69,3 +69,31 @@
   content: "\E600";
 }
 
+/*进入过程设置运动形式*/
+.v-enter-active {
+    transition: all .5s ease;
+}
+/*开始进入初始值*/
+.v-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+/*目标位置*/
+.v-enter-to{
+    opacity: .5;
+    transform: translateY(0px);
+}
+
+.v-leave-active {
+    transition: all .5s ease;
+}
+
+.v-leave {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.v-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+}
+

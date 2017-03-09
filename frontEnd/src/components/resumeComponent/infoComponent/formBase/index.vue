@@ -116,12 +116,13 @@ export default {
       submitForm(formName){
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.isEditorShow = false;
+            this.isInfoShow = true;
             document.body.scrollTop = 0;
-            setTimeout(()=>{
+
+            /*setTimeout(()=>{
               this.isInfoShow = true;
               
-            },1000)
+            },1000)*/
             /*this.$store.dispatch("request-info-save",{
               url:'save',
               data:this.ruleForm
@@ -136,7 +137,6 @@ export default {
         });
       },
       editorHandle(){
-        this.isEditorShow = true;
         this.isInfoShow = false;
       }
     }

@@ -3,7 +3,7 @@
 		title="请填写真的信息，方便招聘者与您联系。"
 		cls="info"
 	></info-prompt>
-	<div class="infoCon" v-show='isEditorShow'>
+		<div class="infoCon" v-show='!isInfoShow'>
 	  <el-form
 	    :model="ruleForm"
 	    :rules="rules"
@@ -131,6 +131,6 @@
 	      </el-button>
 	    </el-form-item>
 	  </el-form>
-	</div>
-	<info-show v-if="isInfoShow" @editor='editorHandle' :ruleForm="ruleForm"></info-show>
+		</div>
+		<info-show v-if="isInfoShow" @editor='editorHandle' :ruleForm="ruleForm"></info-show>
 </section>
