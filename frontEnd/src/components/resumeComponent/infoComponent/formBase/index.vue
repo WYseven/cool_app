@@ -81,7 +81,7 @@ export default {
           graduationTime:[ //最高学历必填
             {required:false,message: '请填写毕业时间',}
           ],
-          work:[ //最高学历必填
+          work:[ //最高+学历必填
             {required:false,message: '请填写工作年限',}
           ],
           seat:[ //所在地

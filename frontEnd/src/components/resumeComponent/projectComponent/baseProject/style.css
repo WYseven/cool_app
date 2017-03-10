@@ -1,9 +1,3 @@
-
-.info{
-  width:1000px;
-  margin:0 auto;
-}
-
 .txt {
     color: #a3acb6;
     line-height: 24px;
@@ -346,4 +340,19 @@ input:focus+em{
 }
 .edit {
 	right: 10px;
+}
+
+.onlinePro .el-form-item__label {
+	font-size: 14px;
+}
+
+/*改写textarea的宽度*/
+
+.el-textarea {
+	width: 318px;
+	height: 118px;
+}
+
+.el-textarea textarea {
+	height: 118px;
 }

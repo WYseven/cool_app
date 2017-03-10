@@ -40,29 +40,58 @@
         </li>
       </ul>
     </div>
-    <el-form
-      :model="ProjectruleForm"
-      :rules="ProjectRules"
-      ref="ProjectruleForm"
-      label-width="138px"
-      class="demo-ruleForm"
-      label-position="left"
-    >
-    
-        <el-form-item label="项目名称" >
-          <el-input class="name-input"></el-input>
-        </el-form-item>
-        <el-form-item label="项目地址" >
-          <el-input class="name-input"></el-input>
-        </el-form-item>
-        <el-form-item label="所用技术" >
-          <el-input class="name-input"></el-input>
-        </el-form-item>
-        <el-form-item label="项目整体描述" >
-          <el-input class="name-input"></el-input>
-        </el-form-item>
+    <div class="infoCon">
+      <el-form
+        :model="ProjectruleForm"
+        :rules="ProjectRules"
+        ref="ProjectruleForm"
+        label-width="138px"
+        class="demo-ruleForm"
+        label-position="left"
+      >
+          <el-form-item label="项目名称" prop="projectName" >
+            <el-input class="name-input" v-model='ProjectruleForm.projectName'></el-input>
+          </el-form-item>
+          <el-form-item label="项目地址" >
+            <el-input class="name-input"></el-input>
+          </el-form-item>
+          <el-form-item label="所用技术" >
+            <el-input class="name-input"></el-input>
+          </el-form-item>
+          <el-form-item label="项目整体描述" >
+            <el-input class="name-input" type="textarea" resize='none'></el-input>
+          </el-form-item>
 
-    </el-form>
+          <el-form-item label="功能描述" >
+            <p>列出项目中某些功能，对功能进行说明，不少于三个</p>
+            <div class="introBox">
+              <input type="text" placeholder="功能">
+              <textarea>说明</textarea>
+              <div class="removeBox">
+                <em></em>
+              </div>
+            </div>
+          </el-form-item>
+
+
+          <el-form-item>
+            <el-button
+              class="reset-button-style reset-button-color" 
+              type="primary"
+            >
+              保存
+            </el-button>
+            <el-button 
+              class='reset-button-style reset-button-border' 
+              style="margin-left: 35px;"
+            >
+
+            重置
+
+            </el-button>
+        </el-form-item>
+      </el-form>
+    </div>
     <!-- 点击添加一个项目组 -->
     <div class="addBox addMorePro">添加更多的项目经验 <em class="addIcon"></em></div>
 
