@@ -120,7 +120,7 @@
 	position: relative;
 	width: 320px;
 	padding: 5px;
-	margin-bottom: 20px;
+	margin-top:20px;
 	border-radius: 2px;
 	background-color: #f3f5f7;
 }
@@ -355,4 +355,55 @@ input:focus+em{
 
 .el-textarea textarea {
 	height: 118px;
+}
+
+.addBox {
+    width: 328px;
+    height: 38px;
+    font-size: 14px;
+    color: #949fab;
+    line-height: 38px;
+    text-align: center;
+    background-color: #f3f5f7;
+    border: 1px dashed #e4e9ed;
+    border-radius: 2px;
+    cursor: pointer;
+    margin:0px auto;
+}
+.addBox:hover {
+    border-color: #e15671;
+    color: #e15671;
+    background-color: #fff;
+}
+
+.addIcon {
+    display: inline-block;
+    width: 29px;
+    height: 28px;
+    background: url(/static/images/common/add.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.addBox:hover .addIcon {
+    background: url(/static/images/common/addHover.png) no-repeat;
+    background-size: 100% 100%;
+}
+.addBox .addIcon {
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.onlinePro .el-form-item {
+	margin-bottom: 22px;
+}
+
+.submitPrompt {
+    padding-left: 22px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #e15671;
+    background: url(/static/images/project/errorcue.png) no-repeat 0 10px;
 }
