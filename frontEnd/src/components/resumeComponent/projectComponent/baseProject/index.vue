@@ -3,6 +3,7 @@
 </template>
 <script>
 import infoPrompt from '../../prompt/InfoPrompt.vue'
+import mAlert from '../../alert/index.vue'
  export default {
  	data(){
  		return {
@@ -15,7 +16,8 @@ import infoPrompt from '../../prompt/InfoPrompt.vue'
  				functionalDescribe:[
  					{
  						title:'',
- 						value:''
+ 						value:'',
+ 						isAlert:false
  					}
  				]  //功能描述
  			},
@@ -42,7 +44,8 @@ import infoPrompt from '../../prompt/InfoPrompt.vue'
  		}
  	},
  	components:{
- 		infoPrompt
+ 		infoPrompt,
+ 		mAlert
  	},
  	computed:{
  		functionalDescribe(){
@@ -52,9 +55,15 @@ import infoPrompt from '../../prompt/InfoPrompt.vue'
  			return this.functionalDescribe.length
  		}
  	},
+ 	mounted(){
+ 		document.addEventListener('click',()=>{
+ 			this.functionalDescribe.forEach((item)=>{
+ 				item.isAlert = false;
+ 			})
+ 		})
+ 	},
  	methods:{
  		submitForm(formName){
- 			
 
  			this.$refs[formName].validate( (valid) => {
  				if(valid){
@@ -64,18 +73,33 @@ import infoPrompt from '../../prompt/InfoPrompt.vue'
 		 				return;
 		 			}
  				}
- 			} )
+ 			} );
+ 		},
+ 		reconfirm(item,ev){
+ 			this.functionalDescribe.forEach((value)=>{
+ 				console.log(value !== item);
+ 				if(value !== item){
+ 					value.isAlert = false;
+ 				}
+ 			})
+
+ 			item.isAlert = true;
  		},
  		addDescribe(){  //添加功能描述
  			this.functionalDescribe.push({
  				value:'',
  				title:'',
+ 				isAlert:false,
  				key:new Date()
  			});
 
  			if(this.len >=3 ){
  				this.atLeastThree = false;
  			}
+ 		},
+ 		cancelDescribe(item){
+
+ 			item.isAlert = false;
  		},
  		removeDescribe(index){  //移出功能描述
  			this.functionalDescribe.splice(index,1);

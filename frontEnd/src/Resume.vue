@@ -53,7 +53,7 @@ export default {
   }
   .content-left {
     float: left;
-    overflow: hidden;
+    box-sizing:border-box;
     width: 752px;
   }
 </style>

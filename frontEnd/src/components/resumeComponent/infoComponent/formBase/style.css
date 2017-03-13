@@ -5,6 +5,7 @@
 }
 .infoCon{
   width:604px;
+  box-sizing:border-box;
   padding:30px 82px 40px 64px;
   background-color: #fff;
   margin-top:30px;

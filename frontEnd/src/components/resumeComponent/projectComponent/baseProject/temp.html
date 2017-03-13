@@ -84,8 +84,14 @@
                <el-input class="name-input" placeholder='描述' v-model='functionalDescribe.value' type="textarea" resize='none' ></el-input>
               </el-form-item>
                 
-                <div class="removeBox" @click="removeDescribe(index)">
+                <div class="removeBox" @click.stop="reconfirm(functionalDescribe)">
                   <em></em>
+                  <m-alert 
+                    v-if="functionalDescribe.isAlert" 
+                    @click-ok='removeDescribe(index)'
+                    @click-cancel='cancelDescribe(functionalDescribe)'
+                    cancelStop
+                  ></m-alert>
                 </div>
               </el-form-item>
               
