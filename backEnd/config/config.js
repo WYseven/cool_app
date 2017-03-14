@@ -24,4 +24,6 @@ exports.path = {
     CONTROLLER_PATH:path.resolve(ROOT,'controller'),
     LIB_PATH:path.resolve(ROOT,'lib'),
     MODEL_PATH:path.resolve(ROOT,'common/model'),
+    DATABASE_PATH:path.resolve(ROOT,'common/database'),
+    SCHEMA_PATH:path.resolve(ROOT,'common/schema')
 }

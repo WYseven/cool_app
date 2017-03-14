@@ -2,7 +2,7 @@
  * Created by wangyun on 17/3/8.
  */
 const path = require('path');
-const Model = require(path.resolve(GLOBALPATH.MODEL_PATH,'Model'))
+const InfoModel = require(path.resolve(GLOBALPATH.MODEL_PATH,'InfoModel'))
 
 module.exports = class Info {
     constructor(){
@@ -10,16 +10,13 @@ module.exports = class Info {
     }
 
     saveAction(req,res){
-
-
-
-        var m = new Model("Info");
-
-        m.save({name:'leo'}).then(function(){
+        //存储数据
+        var info = new InfoModel(req.body);
+        console.dir(info)
+        info.save().then(function(err,data){
+            console.log(err)
             res.send("saveok");
         })
-
-
         
     }
 }
