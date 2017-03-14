@@ -48,12 +48,11 @@ export default {
           education:"初中", 
           graduationTime:'2017/10',
           work:'10',
-          seat:'北京',
           originPlace:'北京', 
           qq:'2214455245',
           mchat:'2214455245',
           birthday:'1990/11/13',
-          companyUrl:'社交主页'
+          companyUrl:''
         }),  //表单字段
         InfoStaticData,
         rules:{

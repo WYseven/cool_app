@@ -20,7 +20,7 @@ const InfoStaticData = {
 		forwardStep:10
 	},
 	//所在地
-	seat:{},
+	seat:cityDatas,
 	citys: cityDatas,
 	informations:{
 		name:'姓名',
@@ -36,7 +36,7 @@ const InfoStaticData = {
 		qq:'QQ',
 		mchat:'微信号',
 		birthday:'生日',
-		companyUrl:'社交主页'
+		companyUrl:[]
 	}
 }
 

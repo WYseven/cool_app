@@ -94,18 +94,16 @@
 	    <el-form-item label="社交主页">
 	    	<info-social>
 	    		<template scope="props">
-	    			<div class="socialDet" v-for="info,key of props.companyData" v-if="info.isWrite" >
-			            <img :src="info.companyLog">
+	    			<div class="socialDet" v-for="companyData,key of props.companyData" v-if="companyData.isWrite">
+			            <img :src="companyData.companyLog">
 			            <el-row>
 						  <el-col :span="18" >
-						  		<el-form-item prop="companyUrl" >
-						      		<el-input class="name-input" v-model="ruleForm.companyUrl">
-						      			
-						      		</el-input>
+						  		<el-form-item prop="companyUrl"  >
+						      		<el-input class="name-input" v-model="ruleForm.companyUrl"></el-input>
 						    </el-form-item>
 						  </el-col>
 						  <el-col :span="2">
-								<a href="javascript:;" class="socialClose" @click="info.isWrite = false"></a>
+								<a href="javascript:;" class="socialClose" @click="companyData.isWrite = false"></a>
 						  </el-col>
 						</el-row>
 			        </div>
