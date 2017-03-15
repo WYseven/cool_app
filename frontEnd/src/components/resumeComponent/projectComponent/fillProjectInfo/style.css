@@ -1,0 +1,272 @@
+.txt {
+    color: #a3acb6;
+    line-height: 24px;
+}
+.onlinePro .infoCon {
+	width: 100%;
+}
+/*蕁合���駚�*/
+.onlinePro,
+.proShow {
+	width: 720px;
+	padding: 40px 0 30px 30px;
+	margin:20px 0;
+	background-color: #fff;
+}
+.ProTitle {
+	font-size: 18px;
+	color: #949fab;
+	line-height: 1;
+	margin-bottom: 29px;
+}
+.onlineProImg {
+	width: 330px;
+	margin: 0 auto;
+}
+.onlineProImg div {
+	padding:39px 0 19px;
+	margin: 0 auto 15px;
+	text-align: center;
+	background-color: #f3f5f7;
+	border: 1px dashed #e4e9ed;
+}
+.add {
+	display: inline-block;
+	width: 29px;
+	height: 28px;
+	background: url(/static/images/project/add.png) no-repeat;
+	cursor: pointer;
+}
+.onlineProImg p {
+	font-size: 14px;
+	line-height: 52px;
+	color: #707a87;
+}
+.onlineProImg ul {
+	margin-right: -15px;
+}
+.onlineProImg li {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin:5px 15px 12px 0;
+	box-sizing: border-box;
+}
+.onlinePro .addImg {
+	padding: 15px 14px 0;
+	font-size: 14px;
+	color: #707a87;
+	text-align: center;
+	border:1px dashed #e4e9ed;
+	background-color: #f3f5f7;
+	cursor: pointer;
+}
+.onlineProImg .active {
+	border:1px solid #e15671;
+}
+.onlinePro .addImg p{
+	margin-top: 9px;
+	line-height: 20px;
+}
+.onlinePro .addImg:hover {
+	background-color: #fff;
+	border-color: #e15671;
+}
+.onlinePro .addImg:hover .add {
+	background: url(/static/images/project/addHover.png) no-repeat;
+}
+.active .remove{
+	position: absolute;
+	top: -11px;
+	right: -11px;
+	width: 22px;
+	height: 22px;
+	background: url(/static/images/project/remove.png) no-repeat;
+	cursor: pointer;
+}
+
+/*��鎖蕁合��；������*/
+.onlinePro .inputLeft {
+	width: 175px;
+}
+.onlinePro form {
+	margin-top: 5px;
+}
+.onlinePro form>div {
+	margin-bottom: 20px;
+}
+.forTextarea {
+	font-size: 14px;
+}
+.textArea {
+	float: left;
+	width: 318px;
+	height: 118px;
+	padding-left: 10px;
+	border: 1px solid #e4e9ed;
+	border-radius: 4px;
+}
+.onlinePro form .explain{
+	font-size: 14px;
+}
+.explain p{
+	font-size: 14px;
+	color: #949fab;
+	line-height: 34px;
+}
+.introSection {
+	position: relative;
+	float: left;
+}
+.introBox {
+	position: relative;
+	width: 320px;
+	padding: 5px;
+	margin-top:20px;
+	border-radius: 2px;
+	background-color: #f3f5f7;
+}
+.addMorePro {
+	margin-left: 200px;
+}
+.introBox input,
+.introBox textarea {
+	width: 100%;
+	border: 1px solid #e4e9ed;
+	border-radius: 2px;
+	line-height: 32px;
+	background: #fff;
+	color: #707a87;
+}
+.introBox input {
+	height: 32px;
+}
+.introBox textarea {
+	height: 107px;
+}
+.removeBox {
+	position: absolute;
+	right: -11px;
+	top: -11px;
+}
+.removeBox>em {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url(/static/images/project/removeGray.png) no-repeat;
+	cursor: pointer;
+}
+.removeBox>em:hover {
+	background: url(/static/images/project/remove.png) no-repeat;
+}
+.removeBox .deleBox {
+	left: -17px;
+	top: 18px;
+	z-index: 3;
+}
+.infoBtn {
+	margin-top: 30px;
+}
+
+.explain .submitPrompt {
+	padding-left: 22px;
+	line-height: 36px;
+	color: #e15671;
+	background: url(/static/images/project/errorcue.png) no-repeat 0 10px;
+
+}
+.examples {
+	position: absolute;
+	top: 60px;
+	right: -290px;
+	width: 280px;
+}
+.examples>p{
+	padding-left: 22px;
+	line-height: 16px;
+	color: #949fab;
+	background: url(/static/images/project/examples.png) no-repeat;
+	cursor: pointer;
+}
+.examples>p:hover+div{
+	display: block;
+}
+.examples div {
+	display: none;
+	width: 276px;
+	height: 157px;
+	padding: 28px 18px;
+	background: url(/static/images/project/examplesBg.png) no-repeat;
+	box-sizing: border-box;
+}
+.examples span {
+	float: left;
+	line-height: 24px;
+}
+.examples span:nth-of-type(2) {
+	width: 196px;
+}
+
+
+/*改写textarea的宽度*/
+
+.el-textarea {
+	width: 318px;
+	height: 118px;
+}
+
+.el-textarea textarea {
+	height: 118px;
+}
+
+.addBox {
+    width: 328px;
+    height: 38px;
+    font-size: 14px;
+    color: #949fab;
+    line-height: 38px;
+    text-align: center;
+    background-color: #f3f5f7;
+    border: 1px dashed #e4e9ed;
+    border-radius: 2px;
+    cursor: pointer;
+    margin:0px auto;
+}
+.addBox:hover {
+    border-color: #e15671;
+    color: #e15671;
+    background-color: #fff;
+}
+
+.addIcon {
+    display: inline-block;
+    width: 29px;
+    height: 28px;
+    background: url(/static/images/common/add.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.addBox:hover .addIcon {
+    background: url(/static/images/common/addHover.png) no-repeat;
+    background-size: 100% 100%;
+}
+.addBox .addIcon {
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.onlinePro .el-form-item {
+	margin-bottom: 22px;
+}
+
+.submitPrompt {
+    padding-left: 22px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #e15671;
+    background: url(/static/images/project/errorcue.png) no-repeat 0 10px;
+}

@@ -4,11 +4,15 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
+import project from './modules/project.js'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   strict: true,
+  modules:{
+    project
+  },
   state: {
     currentNav: 'info',  //所处在的路由
     info:[]

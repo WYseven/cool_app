@@ -9,7 +9,14 @@ export default {
 		addButton,
 		edit
 	},
-	props:['projectShowData']
+	props:{
+		projectShowData:{
+			type:Object,
+			default:()=>{
+				return {}
+			}
+		}
+	}
 }
 </script>
 <style src="./style.css"></style>

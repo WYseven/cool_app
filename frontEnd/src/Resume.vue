@@ -4,7 +4,9 @@
     <comm-nav :current-nav="currentNav"></comm-nav>
     <div class="content">
       <div class="content-left">
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </div>
       <div class="content-right">
         <preview></preview>
