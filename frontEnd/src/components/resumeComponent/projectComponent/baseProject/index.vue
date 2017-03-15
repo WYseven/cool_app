@@ -2,21 +2,33 @@
 
 </template>
 <script>
-import infoPrompt from '../../prompt/InfoPrompt.vue'
-import mAlert from '../../alert/index.vue'
- export default {
+import infoPrompt from '../../comm/prompt/InfoPrompt.vue'
+import mAlert from '../../comm/alert/index.vue'
+import ProjectShow from '../projectShow/index.vue'
+export default {
  	data(){
  		return {
  			atLeastThree:false,
+ 			isProjectShow:false,  //是否显示展示
  			ProjectruleForm:{
- 				projectName:'',  //项目名称
- 				projectSkills:'',//所用技术
- 				projectUrl:'',   //项目地址
- 				projectDescribe:'', //项目描述
+ 				projectName:'妙味课堂123',  //项目名称
+ 				projectSkills:["javascript","css","html"],//所用技术
+ 				projectUrl:'http://www.miaov.com/',   //项目地址
+ 				projectDescribe:'JS整站开发之：整屏切换+动画制作神器“TweenMax库”导航条和首屏出场动画、3D翻转实现、整屏切换，页面动画计算滚动条滚动距离， 拖动滚动条触发页面动画，完善每一屏内的图片翻转，缩小浏览器，做布局转换。', //项目描述
  				functionalDescribe:[
  					{
- 						title:'',
- 						value:'',
+ 						title:'整站开发',
+ 						value:'整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发',
+ 						isAlert:false
+ 					},
+ 					{
+ 						title:'整站开发',
+ 						value:'整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发',
+ 						isAlert:false
+ 					},
+ 					{
+ 						title:'整站开发',
+ 						value:'整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发整站开发',
  						isAlert:false
  					}
  				]  //功能描述
@@ -29,7 +41,7 @@ import mAlert from '../../alert/index.vue'
  					{required:true,message:"请填写项目地址",trigger:"blur,change"}
  				],
  				projectSkills:[
- 					{required:true,message:"请填写所用技术",trigger:"blur,change"}
+ 					{required:false,message:"请填写所用技术",trigger:"blur,change"}
  				],
  				projectDescribe:[
  					{required:true,message:"请填写项目描述",trigger:"blur,change"}
@@ -45,7 +57,8 @@ import mAlert from '../../alert/index.vue'
  	},
  	components:{
  		infoPrompt,
- 		mAlert
+ 		mAlert,
+ 		ProjectShow
  	},
  	computed:{
  		functionalDescribe(){
@@ -72,6 +85,14 @@ import mAlert from '../../alert/index.vue'
 		 				this.atLeastThree = true;
 		 				return;
 		 			}
+
+		 			//需要发送ajax请求
+		 			document.body.scrollTop = 0;
+		 			setTimeout(()=>{
+		 				this.isProjectShow = true;
+		 			},1000)
+
+		 			console.log( this.ProjectruleForm );
  				}
  			} );
  		},

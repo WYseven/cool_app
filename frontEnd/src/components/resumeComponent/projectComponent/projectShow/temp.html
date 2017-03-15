@@ -1,0 +1,47 @@
+<section class="proShow">
+  <add-button></add-button>
+  <p class="ProTitle">项目经验展示</p>
+  <section class="proShowList clearFix">
+    <div class="proShowImg">
+      <ul class="clearFix">
+        <li><img src="/static/images/project/proimg01.png" alt=""></li>
+        <li><img src="/static/images/project/pro02.png" alt=""></li>
+        <li><img src="/static/images/project/pro03.png" alt=""></li>
+      </ul>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+    <div class="proShowDetails">
+      <div class="proShowItem">
+        <p class="proItemTitle">
+          <a :href="projectShowData.projectUrl">{{projectShowData.projectName}}</a>
+        </p>
+        <p class="synopsis">
+          {{projectShowData.projectDescribe}}
+        </p>
+        <div class="knowledgePoint clearFix">
+          <em v-for="item,index of projectShowData.projectSkills">{{item}}</em>
+        </div>
+        <ul class="showFunction">
+          <li v-for="item,index of projectShowData.functionalDescribe">
+            <em>{{index+1}}</em>
+            <div>
+              <p class="proItemTitle">{{item.title}}</p>
+              <p class="synopsis">
+                {{item.value}}
+              </p>
+            </div>
+          </li>
+        </ul>
+        <!-- 编辑 -->
+        <edit></edit>
+      </div>
+      
+    </div>
+  </section>
+
+</section>

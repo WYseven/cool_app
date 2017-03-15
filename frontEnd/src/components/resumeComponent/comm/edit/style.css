@@ -1,0 +1,27 @@
+.edit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.edit em {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.edit em:nth-of-type(1) {
+    background: url(/static/images/project/edit.png) no-repeat;
+}
+
+.edit em:nth-of-type(1):hover {
+    background: url(/static/images/project/edithover.png) no-repeat;
+}
+
+
+.edit em:nth-of-type(2) {
+    background: url(/static/images/project/proremove.png) no-repeat;
+}
+.edit em:nth-of-type(2):hover {
+    background: url(/static/images/project/proremovehover.png) no-repeat;
+}

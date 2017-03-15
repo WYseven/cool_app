@@ -10,7 +10,7 @@
 	</info-prompt>
 
   <!-- 在线项目 -->
-  <section class="onlinePro">
+  <section class="onlinePro" v-show='!isProjectShow'>
     <p class="ProTitle">在线项目</p>
     <div class="onlineProImg">
       <div>
@@ -55,9 +55,9 @@
           <el-form-item label="项目地址" prop='projectUrl'>
             <el-input class="name-input" v-model='ProjectruleForm.projectUrl'></el-input>
           </el-form-item>
-          <el-form-item label="所用技术" prop='projectSkills'>
+          <!-- <el-form-item label="所用技术" prop='projectSkills'>
             <el-input class="name-input" v-model='ProjectruleForm.projectSkills'></el-input>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item label="项目整体描述" prop='projectDescribe'>
             <el-input class="name-input" type="textarea" resize='none' v-model='ProjectruleForm.projectDescribe'></el-input>
           </el-form-item>
@@ -122,7 +122,7 @@
     </div>
     <!-- 点击添加一个项目组 -->
     <div class="addBox addMorePro">添加更多的项目经验 <em class="addIcon"></em></div>
-
   </section>
-	
+	<project-show v-if='isProjectShow' :projectShowData='ProjectruleForm'></project-show>
 </section>
+
