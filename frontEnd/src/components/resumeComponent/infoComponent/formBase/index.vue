@@ -3,7 +3,7 @@
 </template>
 <script>
 import Vue from 'vue'
-import infoPrompt from '../../prompt/InfoPrompt.vue'
+import infoPrompt from '../../comm/prompt/InfoPrompt.vue'
 import infoShow from '../infoShow/index.vue'
 import infoSocial from '../infoSocial/index.vue'
 

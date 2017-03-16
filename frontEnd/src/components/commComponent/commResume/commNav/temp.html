@@ -2,27 +2,27 @@
   <div class="navCon">
     <ul class="navConLeft">
       <li>
-        <a href="#info" :class="{current:currentNav==='info'}">基本信息</a>
+        <router-link to="/top" :class="{current:currentNav==='info'}">基本信息</router-link>
         <span class="mustOptions"></span>
       </li>
       <li>
-        <a href="#project" :class="{current:currentNav==='project'}">项目经验</a>
+        <router-link to="/project" :class="{current:currentNav==='project'}">项目经验</router-link>
         <span class="mustOptions"></span>
       </li>
       <li>
-        <a href="#skill" :class="{current:currentNav==='skill'}">技能评估</a>
+        <router-link to="/skill" :class="{current:currentNav==='skill'}">技能评估</router-link>
         <span class="mustOptions"></span>
       </li>
       <li>
-        <a href="#profile" :class="{current:currentNav==='profile'}">个人介绍</a>
+        <router-link to="/profile" :class="{current:currentNav==='profile'}">个人介绍</router-link>
         <span class="mustOptions"></span>
       </li>
       <li>
-        <a href="#work" :class="{current:currentNav==='work'}">工作经历</a>
+        <router-link to="/work" :class="{current:currentNav==='work'}">工作经历</router-link>
         <span class="noOptions"></span>
       </li>
       <li  class="noRight">
-        <a href="#education" :class="{current:currentNav==='education'}">教育经历</a>
+        <router-link to="/education" :class="{current:currentNav==='education'}">教育经历</router-link>
         <span class="noOptions"></span>
       </li>
     </ul>

@@ -57,6 +57,8 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
+
+
 module.exports = app.listen(port, function (err) {
   if (err) {
     console.log(err)
@@ -68,6 +70,8 @@ module.exports = app.listen(port, function (err) {
   if(process.argv[2]){
     layer = process.argv[2];
   }
+
+  
 
   var uri = 'http://localhost:' + port + "/"+layer;
   console.log('Listening at ' + uri + '\n')
