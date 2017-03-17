@@ -3,54 +3,88 @@
  */
 
 //创建数据库的原型（Schema）
-
+const path = require('path')
+const {validate} = require(path.resolve(GLOBALPATH.LIB_PATH,'tools'))
 const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let s = new Schema({
     name:{
-        required:true,
-        type:String
-    }/*,
+        required:[true,"必须填写用户名"],
+        type:String,
+        isAsync:true,
+        validate:{
+            validator(v,cb){
+                setTimeout(function(){
+                    cb(true);
+                },1000)
+            },
+            message:'验证不通过'
+        }
+    },
      gender:{
-     require:true,
-     type:String
+        required:[true,'必须填写性别'],
+        type:String
      },
      phone:{
-     require:true,
-     type:String
+         required:[true,'必须填写电话号码'],
+         validate:{
+             validator(v){
+                 return validate('phone',v);
+             },
+             message:'电话号码不正确'
+         },
+         type:Number
      },
      email:{
-     require:true,
-     type:String
+         required:[true,'必须填写邮箱'],
+         type:String,
+         validate:{
+             validator(v){
+                 return validate('email',v);
+             },
+             message:'邮箱不正确'
+         }
      },
      intention:{      //"求职意向"
-     require:true,
-     type:String
+         required:[true,'必须填写求职意向'],
+         type:String
      },
      education:{        //"最高学历",
-     require:true,
-     type:String
+         required:[true,'必须填写最高学历'],
+         type:String
      },
      graduationTime:{        //'毕业时间',
-     require:true,
-     type:String
+         required:[true,'必须填写毕业时间'],
+         type:String
      },
      work: {        //'工作年限'
-     require:true,
-     type:String
+         required:[true,'必须填写工作年限'],
+         type:String
      },
      seat:String,
      originPlace:String,
-     qq:String,
+     qq:{
+        type:Number,
+         validate:{
+             validator(v){
+                 return validate('qq',v);
+             },
+             message:'qq不正确'
+         }
+     },
      mchat:String,
      birthday:String,
-     companyUrl:Array*/
+     companyUrl:Array
 });
 
 s.pre("save",(next)=>{
-    console.log(123)
+    console.log('提前验证')
     next();
+})
+s.pre("validate",(next)=>{
+    console.log('提前验证validate');
+    next(123);
 })
 
 module.exports = s
