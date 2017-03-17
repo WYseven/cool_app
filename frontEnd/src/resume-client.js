@@ -1,10 +1,8 @@
-import { app, store } from './resume.js'
+import { app, store,router } from './resume.js'
 
-// prime the store with server-initialized state.
-// the state is determined during SSR and inlined in the page markup.
-//store.replaceState(window.__INITIAL_STATE__)
+//初次加载或切换路由后，获取路由值
+router.afterEach(route => {
+  	store.commit('currentNavChange',route.path.slice(1))
+})
 
-// actually mount to DOM
-
-console.log(app);
 app.$mount('#app');

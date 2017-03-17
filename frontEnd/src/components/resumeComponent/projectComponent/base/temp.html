@@ -1,0 +1,33 @@
+<section class="info">
+  <info-prompt 
+		title="填写项目经验，可以提高获取面试的几率，这是一件深思熟虑的事"
+		cls="project"
+	>
+  	<p class="txt">项目经验包括：<br>
+  		1. 从工作中做的项目学习到的经验<br>
+  		2. 个人做的项目中学习到的经验<br>
+  	</p>
+	</info-prompt>
+  <p style="font-size: 50px;text-align: center;" v-show="!loaded">loding....</p>
+  <!-- 在线项目 -->
+  <div v-if="loaded">
+    <section class="onlinePro" v-show='!isFillShow'>
+        <fill-project-info 
+          @click-commit="clickCommit"
+          @click-loaded='clickLoaded'
+          :show='!isFillShow'
+          :ProjectruleFormData='ProjectruleFormData'
+        ></fill-project-info>
+      <!-- 点击添加一个项目组 -->
+      <!-- <div class="addBox addMorePro">添加更多的项目经验 <em class="addIcon"></em></div> -->
+    </section>
+    <template v-if='projectruleArr.length'>
+        <project-show 
+           v-show='isFillShow'
+          :projectruleArr='projectruleArr'
+          @click-add-btn='addProject'
+        ></project-show>
+    </template>
+  </div>
+</section>
+

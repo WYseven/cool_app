@@ -7,7 +7,7 @@ export default {
  	data(){
  		return {
  			atLeastThree:false,
- 			ProjectruleForm:{
+ 			selfShow:this.show/*{
  				projectName:'妙味课堂123',  //项目名称
  				projectSkills:["javascript","css","html"],//所用技术
  				projectUrl:'http://www.miaov.com/',   //项目地址
@@ -29,7 +29,8 @@ export default {
  						isAlert:false
  					}
  				]  //功能描述
- 			},
+ 			}*/,
+ 			a:this.ProjectruleFormData,
  			ProjectRules:{
  				projectName:[
  					{required:true,message:"请填写项目名称",trigger:"blur,change"}
@@ -52,47 +53,78 @@ export default {
  			}
  		}
  	},
+ 	watch:{
+ 		selfShow(){
+ 			console.log("kkk");
+ 		}
+ 	},
  	components:{
  		mAlert
  	},
+ 	props:{
+ 		show:Boolean,
+ 		ProjectruleFormData: {
+ 			type:Object
+ 		}
+ 	},
  	computed:{
- 		functionalDescribe(){
- 			return this.ProjectruleForm.functionalDescribe;
- 		},
+ 		
  		len(){
  			return this.functionalDescribe.length
+ 		},
+ 		selfShows(){
+ 			this.selfShow = this.show;
+ 			return this.show;
+ 		},
+ 		ProjectruleForm(){
+
+ 			return this.a;
+ 		},
+ 		functionalDescribe(){
+ 			console.log(this.ProjectruleForm);
+ 			return this.ProjectruleForm.functionalDescribe;
  		}
  	},
  	mounted(){
  		document.addEventListener('click',()=>{
- 			this.functionalDescribe.forEach((item)=>{
- 				item.isAlert = false;
- 			})
+ 			if(this.functionalDescribe){
+
+	 			this.functionalDescribe.forEach((item)=>{
+	 				item.isAlert = false;
+	 			})
+ 			}
  		})
+
+ 		console.log(this.show);
  	},
  	methods:{
  		submitForm(formName){
  			this.$refs[formName].validate( (valid) => {
  				if(valid){
  					//如果少于3项功能描述，则不通过提交
- 					if(this.len < 3){
+ 					if(this.len < 0){
 		 				this.atLeastThree = true;
 		 				return;
 		 			}
 
 		 			//需要发送ajax请求
 		 			document.body.scrollTop = 0;
-          //发送ajax请求了
+          			//发送ajax请求了
 
-          this.$store.dispatch('addProjectData',this.ProjectruleForm);
+          			this.$store.dispatch('addProjectData',this.ProjectruleForm)
+          			.then( ()=>{
+          				this.$emit("click-commit");
+          			})
 
-          console.log(this.$store.state.project.projectruleArr);
+          			//this.$emit("click-loaded");
+
+          			this.selfShow = false;
+         			
  				}
- 			} );
+ 			});
  		},
  		reconfirm(item,ev){
  			this.functionalDescribe.forEach((value)=>{
- 				console.log(value !== item);
  				if(value !== item){
  					value.isAlert = false;
  				}
@@ -108,7 +140,7 @@ export default {
  				key:new Date()
  			});
 
- 			if(this.len >=3 ){
+ 			if(this.len >=0 ){
  				this.atLeastThree = false;
  			}
  		},

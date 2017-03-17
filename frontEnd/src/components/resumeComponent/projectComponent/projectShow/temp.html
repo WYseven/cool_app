@@ -1,7 +1,7 @@
 <section class="proShow">
-  <add-button></add-button>
+  <add-button @click-button="clickBtnHandle"></add-button>
   <p class="ProTitle">项目经验展示</p>
-  <section class="proShowList clearFix">
+  <section class="proShowList clearFix" v-for="projectShowData of projectruleArr">
     <div class="proShowImg">
       <ul class="clearFix">
         <li><img src="/static/images/project/proimg01.png" alt=""></li>

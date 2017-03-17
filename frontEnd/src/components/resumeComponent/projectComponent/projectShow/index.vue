@@ -10,11 +10,16 @@ export default {
 		edit
 	},
 	props:{
-		projectShowData:{
-			type:Object,
+		projectruleArr:{
+			type:Array,
 			default:()=>{
-				return {}
+				return []
 			}
+		}
+	},
+	methods:{
+		clickBtnHandle(){  //点击添加项目按钮
+			this.$emit('click-add-btn')
 		}
 	}
 }
