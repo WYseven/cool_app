@@ -9,7 +9,7 @@ exports.db = {
     host:'mongodb://localhost',
     user:"root",
     password:'',
-    database:'cool_resume',
+    database:'cool',
     port:'27017',
     charset:'utf-8'
 }
@@ -21,9 +21,11 @@ const ROOT = process.cwd();
 exports.path = {
     ROOT_path:ROOT,
     CONFING_PATH:path.resolve(ROOT,'config'),
-    CONTROLLER_PATH:path.resolve(ROOT,'controller'),
+    CONTROLLER_PATH:path.resolve(ROOT,'src/controller'),
     LIB_PATH:path.resolve(ROOT,'lib'),
-    MODEL_PATH:path.resolve(ROOT,'common/model'),
+    MODEL_PATH:path.resolve(ROOT,'src/model'),
     DATABASE_PATH:path.resolve(ROOT,'common/database'),
-    SCHEMA_PATH:path.resolve(ROOT,'common/schema')
+    ENTITY_PATH:path.resolve(ROOT,'src/entity'),
+    SERVICE_PATH:path.resolve(ROOT,'src/service'),
+    DAO_PATH:path.resolve(ROOT,'src/dao')
 }
