@@ -77,4 +77,6 @@ var vm = new Vue({
   components: { Resume }
 })
 
+console.log(vm)
+
 

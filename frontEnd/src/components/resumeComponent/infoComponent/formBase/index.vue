@@ -45,10 +45,10 @@ export default {
           phone:"18612987504",
           email:'18612987504@qq.com',
           intention:"web前端",
-          education:"初中", 
+          education:"初中",
           graduationTime:'2017/10',
           work:'10',
-          originPlace:'北京', 
+          originPlace:'北京',
           qq:'2214455245',
           mchat:'2214455245',
           birthday:'1990/11/13',
@@ -120,7 +120,7 @@ export default {
 
             /*setTimeout(()=>{
               this.isInfoShow = true;
-              
+
             },1000)*/
             /*this.$store.dispatch("request-info-save",{
               url:'save',
@@ -128,7 +128,7 @@ export default {
             }).then((response)=>{
               console.log(response.data);
             })*/
-            
+
           } else {
             console.log('error submit!!');
             return false;
