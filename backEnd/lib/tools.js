@@ -23,7 +23,6 @@ let validateRegExp = {
 
 
 function validate(key,message){
-    console.log(key,message)
     if(validateRegExp[key]){
         return validateRegExp[key].test(message);
     }else{
