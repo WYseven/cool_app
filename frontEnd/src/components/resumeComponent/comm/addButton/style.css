@@ -1,0 +1,26 @@
+.showAdd {
+    width: 330px;
+    height: 46px;
+		margin:0px auto;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #e15671;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.showAdd .addIcon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 15px;
+    background: url(/static/images/common/addWhite.png) no-repeat;
+    background-size: 100% 100%;
+}
+.showAdd:hover {
+    color: #fff;
+    background-color: #f05573;
+}

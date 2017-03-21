@@ -6,13 +6,16 @@ const bodyParser = require('body-parser');
 
 const path = require('path');
 
+//连接数据库
 
 
 //加载配置信息
 const config = require(path.resolve(process.cwd(),'config/config.js'));
 
+//处理字符串
 const S = require(path.resolve(process.cwd(),'lib/string.js'))
 
+//启动服务
 let app = express();
 app.listen(3001);
 
@@ -29,7 +32,7 @@ module.exports = class Initiate {
         //分发路由
         this.routerDisPatch();
 
-
+        require(path.resolve(GLOBALPATH.DATABASE_PATH,'mongodb'));
     }
 
     static initMiddleware(){
@@ -51,8 +54,6 @@ module.exports = class Initiate {
                 return;
             }
 
-
-
             //通过m找到控制器
 
             let controller_path = GLOBALPATH.CONTROLLER_PATH;
@@ -60,25 +61,11 @@ module.exports = class Initiate {
             let controller_file_path = path.resolve(controller_path,S(c).capitalize()+'Controller.js');
             let C = null;
 
-            try{
-                C = require(controller_file_path)
-            }catch(e){
-                console.log(e)
-                res.end();
-                return;
-            }
-
-
+            C = require(controller_file_path);
 
             let controller = new C();
 
-            try{
-                controller[`${a}Action`].call(null,req,res);
-            }catch(e){
-
-                res.end();
-                return;
-            }
+            controller[`${a}Action`].call(null,req,res);
         })
     }
 

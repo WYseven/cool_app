@@ -1,0 +1,110 @@
+<div v-show='selfShow' :a='selfShows'>
+  <p class="ProTitle">在线项目</p>
+  <div class="infoCon">
+
+    <el-form
+      :model="ProjectruleForm"
+      :rules="ProjectRules"
+      ref="ProjectruleForm"
+      label-width="138px"
+      class="demo-ruleForm"
+      label-position="left"
+    >
+      <div class="onlineProImg">
+        <div>
+          <em class="addIcon"></em>
+          <p>添加项目压缩图，最多可添加6张</p>
+        </div>
+        <ul class="clearFix">
+          <li>
+            <img src="/static/images/project/pro01.png" alt="">
+            <em class="remove"></em>
+          </li>
+          <li>
+            <img src="/static/images/project/pro02.png" alt="">
+            <em class="remove"></em>
+          </li>
+          <li>
+            <img src="/static/images/project/pro03.png" alt="">
+            <em class="remove"></em>
+          </li>
+          <li class="active">
+            <img src="/static/images/project/pro01.png" alt="">
+            <em class="remove"></em>
+          </li>
+          <li class="addImg">
+            <em class="addIcon"></em>
+            <p>还可以添加<span>1</span>张</p>
+          </li>
+        </ul>
+      </div>
+        <el-form-item label="项目名称" prop="projectName" >
+          <el-input class="name-input" v-model='ProjectruleForm.projectName'></el-input>
+        </el-form-item>
+        <el-form-item label="项目地址" prop='projectUrl'>
+          <el-input class="name-input" v-model='ProjectruleForm.projectUrl'></el-input>
+        </el-form-item>
+        <!-- <el-form-item label="所用技术" prop='projectSkills'>
+          <el-input class="name-input" v-model='ProjectruleForm.projectSkills'></el-input>
+        </el-form-item> -->
+        <el-form-item label="项目整体描述" prop='projectDescribe'>
+          <el-input class="name-input" type="textarea" resize='none' v-model='ProjectruleForm.projectDescribe'></el-input>
+        </el-form-item>
+
+        <el-form-item label="功能描述" >
+          <p>列出项目中某些功能，对功能进行说明，不少于三个</p>
+
+            <el-form-item
+              class='introBox'
+              v-for='functionalDescribe,index of ProjectruleForm.functionalDescribe'
+              :key="functionalDescribe.key"
+
+            >
+            <el-form-item :rules="ProjectRules.functionalValue"
+              :prop="'functionalDescribe.' + index + '.title'"
+            >
+              <el-input class="name-input" placeholder='功能' v-model='functionalDescribe.title'></el-input>
+            </el-form-item>
+            <el-form-item
+              :style='{"margin-bottom":0}'
+              :rules="ProjectRules.functionalValue"
+              :prop="'functionalDescribe.' + index + '.value'"
+            >
+             <el-input class="name-input" placeholder='描述' v-model='functionalDescribe.value' type="textarea" resize='none' ></el-input>
+            </el-form-item>
+
+              <div class="removeBox" @click.stop="reconfirm(functionalDescribe)">
+                <em></em>
+                <m-alert
+                  v-if="functionalDescribe.isAlert"
+                  @click-ok='removeDescribe(index)'
+                  @click-cancel='cancelDescribe(functionalDescribe)'
+                  cancelStop
+                ></m-alert>
+              </div>
+            </el-form-item>
+
+        </el-form-item>
+        <div
+          class="addBox addFountion"
+          @click.stop="addDescribe"
+        > 添加功能说明 <em class="addIcon"></em></div>
+        <el-form-item>
+          <el-button
+            class="reset-button-style reset-button-color"
+            type="primary"
+            @click.stop="submitForm('ProjectruleForm')"
+          >
+            保存
+          </el-button>
+          <el-button
+            class='reset-button-style reset-button-border'
+            style="margin-left: 35px;"
+          >
+            重置
+          </el-button>
+          <p class="submitPrompt" v-if='atLeastThree'>功能描述至少添加三项</p>
+      </el-form-item>
+    </el-form>
+  </div>
+</div>

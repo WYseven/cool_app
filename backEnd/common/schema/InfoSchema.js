@@ -8,7 +8,7 @@ const {validate} = require(path.resolve(GLOBALPATH.LIB_PATH,'tools'))
 const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
-let s = new Schema({
+let InfoSchema = new Schema({
     name:{
         required:[true,"必须填写用户名"],
         type:String,
@@ -78,13 +78,5 @@ let s = new Schema({
      companyUrl:Array
 });
 
-s.pre("save",(next)=>{
-    console.log('提前验证')
-    next();
-})
-s.pre("validate",(next)=>{
-    console.log('提前验证validate');
-    next(123);
-})
 
-module.exports = s
+module.exports = InfoSchema

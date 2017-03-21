@@ -13,7 +13,7 @@ var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 module.exports = {
   entry: {
     app: './src/main.js',
-    resume: './src/resume.js',
+    resume: './src/resume-client.js',
     show:"./src/show.js"
   },
   output: {

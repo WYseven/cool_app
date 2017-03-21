@@ -2,7 +2,7 @@
 
 </template>
 <script>
-import infoPrompt from '../prompt/InfoPrompt.vue'
+import infoPrompt from '../comm/prompt/InfoPrompt.vue'
  export default {
  	components:{
  		infoPrompt
