@@ -2,7 +2,7 @@ const path = require('path');
 const {validate} = require(path.resolve(GLOBALPATH.LIB_PATH,'tools'))
 const mongoose = require("mongoose");
 
-let InfoShema = new mongoose.Schema({
+let ProjectShema = new mongoose.Schema({
 	name:{
         required:[true,"必须填写用户名"],
         type:String,
@@ -11,7 +11,7 @@ let InfoShema = new mongoose.Schema({
             validator(v,cb){
                 setTimeout(function(){
                     cb(true);
-                },1000)
+                },1000);
             },
             message:'验证不通过'
         }
@@ -34,45 +34,53 @@ let InfoShema = new mongoose.Schema({
 	 required:[true,'必须填写邮箱'],
 	 type:String,
 	 validate:{
-	     validator(v){
-	         return validate('email',v);
-	     },
-	     message:'邮箱不正确'
+		validator(v){
+		 return validate('email',v);
+		},
+		message:'邮箱不正确'
 	 }
 	},
 	intention:{      //"求职意向"
-	 required:[true,'必须填写求职意向'],
-	 type:String
+		required:[true,'必须填写求职意向'],
+		type:String
 	},
 	education:{        //"最高学历",
-	 required:[true,'必须填写最高学历'],
-	 type:String
+		required: [true, '必须填写最高学历'],
+    	type: String
+
 	},
 	graduationTime:{        //'毕业时间',
-	 required:[true,'必须填写毕业时间'],
-	 type:String
+		required:[true,'必须填写毕业时间'],
+		type:String
 	},
 	work: {        //'工作年限'
-	 required:[true,'必须填写工作年限'],
-	 type:String
+		required:[true,'必须填写工作年限'],
+		type:String
 	},
 	seat:String,
 	originPlace:String,
 	qq:{
 	type:Number,
-	 validate:{
-	     validator(v){
-	         return validate('qq',v);
-	     },
-	     message:'qq不正确'
-	 }
+		validate:{
+			validator(v){
+				return validate('qq',v);
+			},
+			message:'qq不正确'
+		}
 	},
 	mchat:String,
 	birthday:String,
-	companyUrl:Array
+	companyUrl:Array,
+	date: { type: Date, default: Date.now },
+});
+
+
+ProjectShema.pre('validate',function (next,mes){
+	
+	next();
 })
 
 
-let m = mongoose.model("Info",InfoShema);
+let p = mongoose.model("Info",ProjectShema);
 
-module.exports = m;
+module.exports = p;

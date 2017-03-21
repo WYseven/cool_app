@@ -41,6 +41,14 @@ module.exports = class Initiate {
 
         //加载中间件，以备不时之需
         app.use((req,res,next)=>{
+            if(global.databaseError){
+                res.status(500).send({
+                    code:1,
+                    mes:"数据库连接出错"
+                })
+
+                global.databaseError = null;
+            }
             next();
         })
     }
@@ -64,6 +72,16 @@ module.exports = class Initiate {
             C = require(controller_file_path);
 
             let controller = new C();
+
+            //如果找不到action，就返回消息
+            if( !controller[`${a}Action`] ){
+                res.send({
+                    code:0,
+                    mes:"没有指定的行为"
+                })
+
+                return;
+            }
 
             controller[`${a}Action`].call(null,req,res);
         })
