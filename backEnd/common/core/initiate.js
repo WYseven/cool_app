@@ -83,6 +83,8 @@ module.exports = class Initiate {
                 return;
             }
 
+
+
             controller[`${a}Action`].call(null,req,res);
         })
     }

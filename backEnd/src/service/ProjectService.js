@@ -9,4 +9,8 @@ module.exports = class {
 		var Project = new ProjectDao();
 		return Project.saveInfoAllData(data)
 	}
+    findByIdAndUpdate(data){
+        var Project = new ProjectDao();
+        return Project.findByIdAndUpdate(data)
+	}
 }

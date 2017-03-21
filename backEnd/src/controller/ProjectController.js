@@ -1,11 +1,8 @@
 const path = require('path');
 const ProjectService = require(path.resolve(GLOBALPATH.SERVICE_PATH,'ProjectService'));
 const {validateData} = require(path.resolve(GLOBALPATH.LIB_PATH,'tools'));
+
 //action->service
-
-const ProjectEntity = require(path.resolve(GLOBALPATH.ENTITY_PATH,'Project'));
-
-const mongoose = require("mongoose");
 
 module.exports = class {
 
@@ -31,15 +28,28 @@ module.exports = class {
 
     updateAction(req,res){
 
-        var p = new ProjectEntity();
-
-        ProjectEntity.findByIdAndUpdate(req.body._id,{$set:{name:456,phone:5555}})
+        let projectService = new ProjectService();
+        projectService.findByIdAndUpdate(req.body)
             .then(function (data){
-                console.log(data);
-                res.send('更新完成');
+                //更新之后会返回数据
+
+                if(data){
+                    res.send({
+                        code:0,
+                        mes:"更新完成"
+                    });
+                }else{
+                    res.send({
+                        code:1,
+                        mes:"更新的数据不存在"
+                    });
+                }
+
             })
             .catch(function (err){
-                console.log(err);
+                if(err['name'] === 'ValidationError'){
+                    res.send(validateData(err));
+                }
             })
 
         

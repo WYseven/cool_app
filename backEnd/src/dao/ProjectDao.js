@@ -10,4 +10,12 @@ module.exports = class {
 
        return Project.save();
     }
+
+    findByIdAndUpdate(data){
+        return ProjectEntity.findByIdAndUpdate(
+            data._id,
+            {$set:data},
+            {runValidators:true}
+        );
+    }
 }
