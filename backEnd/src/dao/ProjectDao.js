@@ -18,4 +18,9 @@ module.exports = class {
             {runValidators:true}
         );
     }
+
+    getProjectsByUserId(userId){
+        console.log(userId)
+        return ProjectEntity.find({userId:userId});
+    }
 }

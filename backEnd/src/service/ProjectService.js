@@ -13,4 +13,8 @@ module.exports = class {
         var Project = new ProjectDao();
         return Project.findByIdAndUpdate(data)
 	}
+    getProjects(userId){
+        var Project = new ProjectDao();
+        return Project.getProjectsByUserId(userId)
+	}
 }

@@ -3,6 +3,10 @@ const {validate} = require(path.resolve(GLOBALPATH.LIB_PATH,'tools'))
 const mongoose = require("mongoose");
 
 let ProjectShema = new mongoose.Schema({
+    userId:{
+        type:String,
+        required:[true]
+	},
 	name:{
         required:[true,"必须填写用户名"],
         type:String,

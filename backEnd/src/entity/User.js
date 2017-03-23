@@ -16,7 +16,7 @@ let UserShema = new mongoose.Schema({
         type:String,
         required:[true,'密码必须填写'],
     },
-    loginDate:{
+    registerDate:{
         type:Date,
         default:Date.now()
     }

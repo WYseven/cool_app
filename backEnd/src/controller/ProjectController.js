@@ -54,4 +54,25 @@ module.exports = class {
 
         
     }
+
+    getAction(req,res){
+        //通过userId获取数据
+        let projectService = new ProjectService();
+        projectService.getProjects(req.body.userId)
+            .then((data) => {
+                data = !!data.length ? data : [];
+                res.send({
+                    code:0,
+                    mes:"数据获取成功",
+                    data:data
+                })
+
+            })
+            .catch( (err) => {
+                res.send({
+                    code:1,
+                    mes:err
+                })
+            } )
+    }
 }
