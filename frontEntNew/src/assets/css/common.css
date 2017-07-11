@@ -1,0 +1,572 @@
+
+
+/*头部*/
+.topHeader{
+	width:100%;
+	height:70px;
+	background:#fff;
+}
+.headerCon{
+	width:1000px;
+	height:70px;
+	margin: 0 auto;
+}
+/*头部左边logo及按钮*/
+.heaLogo{
+	width:380px
+	height:70px;
+	float: left;
+}
+.heaLogo a{
+	display: block;
+	float: left;
+}
+.heaLogo .logo{
+	width:141px;
+	height:51px;
+	padding-top:19px;
+	margin-right:40px;
+}
+.heaLogo .indexBtn{
+	width:83px;
+	height:26px;
+	line-height: 26px;
+	text-align: center;
+	border:1px solid #e15771;
+	border-radius: 2px;
+	margin:22px 9px 0px;
+	color:#e15771;
+	transition: 1s;
+}
+.heaLogo .indexBtn:hover {
+	background: #e15771;
+	color: #fff;
+}
+/*头部右侧*/
+.heaRight{
+	width:198px;
+	height:42px;
+	float:right;
+	padding-top:28px;
+}
+.heaRight a{
+	display: block;
+	float: left;
+	height:14px;
+	line-height: 14px;
+	padding:0px 20px;
+	border-right:1px solid #e5e5e5;
+	color:#e15771;
+}
+.heaRight .noBorPad{
+	border-right:none;
+	padding-right:0px;
+}
+
+
+/*登陆后头部*/
+.loginHeaRight{
+	width:341px;
+	height:70px;
+	padding:0px;
+}
+.resumeFill{
+	height:18px;
+	line-height: 18px;
+	padding:0px 20px;
+	border-left:1px solid #e5e5e5;
+	color: #6f7c85;
+	margin-top:27px;
+}
+.heaLogo .loginLogo{
+	margin-right:20px;
+}
+.heaRight .posResume{
+	width:100px;
+	height:30px;
+	background: #e15771;
+	border-radius: 2px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	margin-top:20px;
+	margin-right:30px;
+}
+.heaRight .user{
+	width:40px;
+	height:40px;
+	border-radius: 40px;
+	background: url(../images/common/healogo.jpg);
+	padding:0px;
+	margin:14px 10px 0px;
+}
+.heaRight .userName{
+	height:40px;
+	line-height: 40px;
+	margin-top:14px;
+	font-size: 14px;
+	color:#444d56;
+	border:none;
+}
+.heaRight .relase{
+	width:14px;
+	height:14px;
+	background: url(../images/common/relase.jpg) no-repeat;
+	border: none;
+	margin-top:29px;
+	padding:0px;
+}
+
+
+/*导航*/
+.navigation{
+	width:100%;
+	height:59px;
+	background:#f4f5f7;
+	margin-bottom:30px;
+	font-size: 16px;
+}
+.navCon{
+	width:1000px;
+	height:44px;
+	padding-top:15px;
+	margin: 0 auto;
+}
+.navConLeft{
+	width:750px;
+	float: left;
+	border-bottom:1px solid #e4e9ed;
+}
+.navCon li{
+	float: left;
+	height:44px;
+	line-height: 44px;
+	margin-right:73px;
+	position: relative;
+}
+.navCon .noRight{
+	margin-right:0px;
+}
+.navCon li a{
+	float:left;
+	color: #858c96;
+	height:42px;
+	line-height: 42px;
+}
+.navCon li a:hover{
+	color:#e05670;
+	border-bottom:3px solid #e05670;
+}
+/*必须填*/
+.navCon span{
+	display: block;
+	width:59px;
+	height:26px;
+	position: absolute;
+	top: -13px;
+    right: -25px;
+}
+.mustOptions{
+	background: url(../images/common/mustOptions.jpg) no-repeat;
+}
+/*未添加*/
+.noOptions{
+	background: url(../images/common/noOptions.jpg) no-repeat;
+}
+
+
+/*提示填写信息*/
+.prompt{
+	width:1000px;
+	height:190px;
+	margin:0 auto;
+}
+.promptCon{
+	width:340px;
+	height:190px;
+	background-color:#fff;
+	font-size:16px;
+	color: #555e67;
+	padding-left:360px;
+	padding-right:50px;
+	float: left;
+}
+.promptCon .title{
+	color: #444d59;
+	line-height: 30px;
+}
+.promptCon .txt{
+	color:#a3acb6;
+	line-height: 24px;
+}
+/*基本信息,提示信息中背景图片及文字*/
+.infoPro{
+	background:#fff url(../images/common/infoPro.jpg) no-repeat 76px 31px;
+	padding-top:90px;
+	height:100px;
+}
+/*项目经验,提示信息中背景图片及文字*/
+.projectPro{
+	background:#fff url(../images/common/projectPro.jpg) no-repeat 76px 31px;
+	padding-top:30px;
+	height:160px;
+}
+/*技能平台,提示信息中背景图片及文字*/
+.skillPro{
+	background:#fff url(../images/common/skillPro.jpg) no-repeat 76px 31px;
+	padding-top:70px;
+	height:120px;
+}
+/*个人介绍,提示信息中背景图片及文字*/
+.proPro{
+	background:#fff url(../images/common/profilePro.jpg) no-repeat 76px 31px;
+	padding-top:90px;
+	height:100px;
+}
+/*工作经历,提示信息中背景图片及文字*/
+.workPro{
+	background:#fff url(../images/common/workPro.jpg) no-repeat 76px 31px;
+	padding-top:70px;
+	height:120px;
+}
+/*教育经历,提示信息中背景图片及文字*/
+.enduPro{
+	background:#fff url(../images/common/enduPro.jpg) no-repeat 76px 31px;
+	padding-top:70px;
+	height:120px;
+}
+
+/*预览简历*/
+.preResume{
+	width:220px;
+	height:191px;
+	float: right;
+}
+.preResume .preview{
+	width:125px;
+	height:45px;
+	border-radius: 3px;
+	background:#e15671 url(../images/common/preview.png) no-repeat 60px 15px;
+	line-height:45px;
+	padding-left:95px;
+	color: #fff;
+}
+.preResume .proBar{
+	width:220px;
+	height:125px;
+	background-color: #fff;
+	margin-top:20px;
+}
+.proBar p{
+	text-align: center;
+	padding-top:30px;
+	height:24px;
+	line-height:24px;
+	padding-left:45px;
+}
+.proBar span{
+	float:left;
+	margin-right:10px;
+}
+.proBar strong{
+	font-size: 24px;
+	color: #e15671;
+	float: left;
+}
+/*进度条*/
+.progress{
+	width: 179px;
+	height:6px;
+	background:#f3f5f7;
+	border-radius: 1px;
+	margin:30px auto 0px;
+	position: relative;
+}
+/*颜色条*/
+.bar{
+	width:30%;
+	height:6px;
+	background-color:#e15671;
+}
+.ball{
+	position:absolute;
+	left:30%;
+	top:-7px;
+}
+/*文本框*/
+.inputTxt{
+	height:34px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.inputLeft{
+	color:#949fab;
+	text-align: right;
+	margin-right:20px;
+	float: left;
+	height: 34px;
+    line-height: 34px;
+}
+/*星号*/
+.star{
+	color:#e15671;
+	margin-right:9px;
+	font-style: normal;
+	display: inline-block;
+    vertical-align: middle;
+}
+.forTxt{
+	width:318px;
+	height:32px;
+	line-height:32px;
+	border:1px solid #e4e9ed;
+	border-radius: 2px;
+	padding-left:10px;
+	position: relative;
+}
+
+/*文本框为空*/
+.empty{
+	padding-left:22px;
+    margin-left: 8px;
+	background: url(../images/common/empty.png) no-repeat left center;
+	color:#e15671;
+}
+.emptyInput{
+	border-color:#e15671;
+	background-color:#fdf1f3;
+	float: left;
+}
+
+/*文本框填写正确*/
+.correct{
+	background: url(../images/common/correct.png) no-repeat left center;
+	color:#949fab;
+	padding-left:22px;
+    margin-left: 8px;
+}
+
+/*下拉菜单*/
+.dropDown{
+	overflow: hidden;
+}
+.forBox{
+	width:320px;
+	height:34px;
+	position: relative;
+	float: left;
+}
+.dropPic{
+	position: absolute;
+	right:10px;
+	top:13px;
+}
+
+/*学历下拉框*/
+.enduDrop{
+	width:148px;
+	padding:5px;
+	border:1px solid #e36079;
+	border-top:none;
+}
+.enduDrop li{
+	width:148px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+}
+.inputActive{
+	background-color: #e36079;
+}
+
+/*工作年限*/
+.workYears{
+	width:312px;
+	height:180px;
+	padding:5px;
+	border:1px solid #e36079;
+	border-top:none;
+	overflow: hidden;
+	position: relative;
+}
+.workYears li{
+	width:312px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+}
+
+/*毕业年限*/
+.years{
+	width:160px;
+	height:190px;	
+	border:1px solid #e36079;
+	border-top:none;
+}
+.yearLeft{
+	width:52px;
+	height:180px;
+	float:left;
+	padding: 5px;
+	overflow: hidden;
+	position: relative;
+}
+.yearLeft li{
+	width:42px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+}
+
+.yearRight{
+	width:88px;
+	height:180px;
+	float:left;
+	overflow-y: auto;
+	padding: 5px;
+}
+.yearRight li{
+	width:42px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+	float: left;
+}
+
+/*热门城市*/
+.city{
+	width:312px;
+	height:125px;	
+	border:1px solid #e36079;
+	border-top:none;
+}
+.cityLeft{
+	width:88px;
+	height:115px;
+	float:left;
+	padding: 5px;
+	overflow: hidden;
+	position: relative;
+}
+.cityLeft li{
+	width:82px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+}
+
+.cityRight{
+	width:204px;
+	height:115px;
+	float:left;
+	overflow-y: auto;
+	padding: 5px;
+	overflow: hidden;
+	position: relative;
+}
+.cityRight li{
+	width:42px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+	float: left;
+}
+
+
+/*下拉滚动条样式*/
+.workYears .dropBar,.yearLeft .dropBar,.cityLeft .dropBar,.cityRight .dropBar {
+	width:6px;
+	height:185px;
+	background-color:#e4e9ed ;
+	position: absolute;
+	top:5px;
+	right:0px;
+}
+.workYears .dropBar .bars,.yearLeft .dropBar .bars,.cityLeft .dropBar .bars,.cityRight .dropBar .bars{
+	width:6px;
+	height:53px;
+	background-color: #949fab;
+	position: absolute;
+	border-radius: 2px;
+	top:20%;
+}
+
+
+/*保存取消*/
+.infoBtn{
+	height:36px;
+	text-align: center;
+}
+.infoBtn a{
+	width:140px;
+	height:36px;
+	border-radius: 2px;
+	display: inline-block;
+}
+.land{
+	background-color:#e15671;
+	line-height:36px;
+	color:#fff;
+	margin-right:50px;
+	text-align: center;
+}
+.register{
+	height:34px;
+	border:1px solid #e4e9ed;
+	border-radius: 2px;
+	line-height: 34px;
+	text-align: center;
+	color: #707a87;
+}
+
+
+
+/*底部*/
+.foot{
+	width:100%;
+	height:120px;
+	border-top:2px solid #e15771;
+	background: #fff;
+}
+.fotCon{
+	width:1000px;
+	height:91px;
+	margin:0 auto;
+	padding-top:29px;
+}
+/*底部logo*/
+.fotLogo{
+	width:180px;
+	height:51px;
+	float: left;
+}
+/*底部链接、描述*/
+.fotDesc{
+	height:49px;
+	width:790px;
+	padding-top:2px;
+	border-left:1px solid #e0e8ea;
+	float: left;
+	padding-left:29px;
+	color: #9198a0;
+}
+.fotDesc .links{
+	height:15px;
+	font-size: 13px;
+	margin-bottom:14px;
+}
+.fotDesc .links a{
+	height:15px;
+	line-height: 15px;
+	display: block;
+	float: left;
+	padding:0px 9px;
+	border-right:1px solid #b1bac3;
+	color: #9198a0;
+}
+.fotDesc .links .noPadding{
+	padding-left:0px;
+}
+.fotDesc .links .noBorder{
+	border: none;
+}

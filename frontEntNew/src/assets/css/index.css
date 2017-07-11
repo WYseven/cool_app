@@ -1,0 +1,168 @@
+
+/*------------index banner--------------*/
+.indexBanner {
+	padding: 407px 0 25px;
+	background: url(../images/index/indexBanner.png) no-repeat center top #dbdee8;
+}
+.bannerTitle {
+	overflow: hidden;
+	width: 414px;
+	height: 0;
+	padding-top:60px;
+	margin: 0 auto 12px;
+	background: url(../images/index/bannerTitle.png) no-repeat center top;
+}
+.subTitle {
+	width: 414px;
+	height: 44px;
+	margin: 0px auto;
+	font: 20px/44px "微软雅黑";
+	text-align: center;
+	color: #fff;
+	letter-spacing: 20px;
+	background: #eba7b6;
+}
+.useStatistics {
+	margin:0px 0 38px;
+	font-size: 20px;
+	line-height: 48px;
+	color: #424854;
+	text-align: center;
+}
+.useStatistics span {
+	padding: 0 15px;
+	margin: 95px 0 39px;
+	color: #e15570;
+	font: 22px arial;
+}
+.createResume {
+	display: block;
+	width: 230px;
+	height: 46px;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	background-color: #e15771;
+	border-radius: 4px;
+	transition: 1s;
+}
+.createResume:hover {
+	background-color: #f05573;
+	box-shadow: 0 2px 5px #c798a1; 
+}
+.downBtn {
+	display: block;
+	width: 33px;
+	height: 19px;
+	margin: 45px auto 0;
+	background: url(../images/index/downarr.png) no-repeat;
+	cursor: pointer;
+	transition: 1s;
+}
+.downBtn:hover {
+	background:url(../images/index/Hdownarr.png) no-repeat;
+}
+/*------------index banner end--------------*/
+
+/*------------index flowpath--------------*/
+.flowpath .warp {
+	padding: 26px 0 38px;
+}
+.sectionTitle {
+	font-size: 24px;
+	color: #707c88;
+	text-align: center;
+	line-height: 72px;
+}
+.flowpath p {
+	padding-bottom:132px;
+	background: url(../images/index/indexFlowpathBg.jpg) no-repeat 0 72px;
+}
+/*------------index flowpath end--------------*/
+
+/*------------index jobHunting--------------*/
+.jobHunting {
+	overflow: hidden;
+	padding: 26px 0 50px;
+	background: #f4f5f7;
+}
+.jobHunting ul{
+	margin-right: -20px;
+}
+.jobHunting img {
+	width: 100%;
+	height: 100%;
+}
+.jobHunting .item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 193px;
+	height: 173px;
+	padding: 30px 20px;
+	margin: 15px 20px 5px 0;
+	background: #fff;
+	border:1px solid transparent;
+	box-shadow: 0 0 6px #eaeaea;
+	transition: 1s;
+}
+.jobHunting .item .Pic {
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 80px;
+}
+.jobHunting .jobSeeker {
+	font-size: 18px;
+	color: #434d57;
+	line-height: 48px;
+	text-align: center;
+}
+.jobHunting .motto {
+	font-size: 14px;
+	line-height: 24px;
+	color: #949aa6;
+}
+
+/*鼠标hover 状态*/
+.jobHunting .item:hover {
+	box-shadow: none;
+	border-color: #e15771;
+}
+
+.seeMore {
+	display: block;
+	width: 108px;
+	height: 28px;
+	margin: 25px auto 0;
+	border: 1px solid #e15771;
+	border-radius: 4px;
+	color: #e15771;
+	text-align: center;
+	line-height: 28px;
+	transition: 1s;
+}
+.seeMore:hover {
+	background: #e15771;
+	color: #fff;
+	box-shadow:0 2px 4px #bdbdbd;
+	transition: 1s;
+}
+
+/**/
+.startMaking {
+	padding-top: 217px;
+	background: url(../images/index/bg.png) no-repeat center 49px;
+}
+.startMaking p {
+	font-size: 24px;
+	color: #707a87;
+	line-height: 72px;
+	text-align: center;
+}
+.startMaking .createResume {
+	margin-bottom: 50px;
+}
